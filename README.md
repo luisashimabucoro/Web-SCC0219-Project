@@ -32,7 +32,7 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
   - *admin*: id, nome, telefone e email
   - *cliente*: id, nome, endereço, telefone e email
   - *produto geral*: id, nome, foto, descrição, preço, quantidade em estoque e quantidade vendida
-    - *planta*: para plantas, além dos atributos padrões temos tamanho, nível de iluminação, temperatura e arejamento ideais
+    - *planta*: além dos atributos padrões, elas possuem tamanho, nível de iluminação, temperatura e arejamento ideais
 
 ## Comentários Sobre o Código
 ## Plano de Testagem
