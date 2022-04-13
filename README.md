@@ -13,11 +13,11 @@
 - O sistema deve atender os requisitos de acessibilidade e prover boa usabilidade. Além disso, o sistema deve ser responsivo.
 
 
-## Project Description
-## Comments About the Code
-## Test Plan
-## Test Results
-## Build Procedures
-## Problems
-## Comments
+## Descrição do Projeto
+## Comentários Sobre o Código
+## Plano de Testagem
+## Resultado dos Testes
+## Procedimentos de Construção
+## Problemas
+## Comentários
 
