@@ -14,7 +14,7 @@
 
 - Gerenciamento de produtos/serviços: administradores podem criar/atualizar/ler/deletar (CRUD) novos produtos e serviços. Por exemplo, eles podem alterar a quantidade de produtos no estoque.
 
-- Funcionalidade específica: o cliente pode selecionar o tipo de residência (casa ou apartamento) e características como iluminação do cômodo, temperatura e arejamento. Com isso, a aplicação oferece sugestões de plantas específicas para as características selecionadas.
+- **Funcionalidade específica:** o cliente pode selecionar o tipo de residência (casa ou apartamento) e características como iluminação do cômodo, temperatura e arejamento. Com isso, a aplicação oferece sugestões de plantas específicas para as características selecionadas.
 
 - O sistema deve atender os requisitos de acessibilidade e prover boa usabilidade. Além disso, o sistema deve ser responsivo.
 
