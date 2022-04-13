@@ -31,7 +31,8 @@ Esse projeto consiste no desenvolvimento de uma aplicação online para uma loja
 Para que essas funcionalidades possuam um funcionamento adequado será necessário armazenar as seguintes informações:
   - *admin*: id, nome, telefone e email
   - *cliente*: id, nome, endereço, telefone e email
-  - *produto*: id, nome, foto, descrição, preço, quantidade em estoque e quantidade vendida
+  - *produto geral*: id, nome, foto, descrição, preço, quantidade em estoque e quantidade vendida
+    - *planta*: para plantas, além dos atributos padrões temos tamanho, nível de iluminação, temperatura e arejamento ideais
 
 ## Comentários Sobre o Código
 ## Plano de Testagem
