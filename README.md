@@ -24,7 +24,6 @@ Esse projeto consiste no desenvolvimento de uma aplicação online para uma loja
 - Cadastro e Login
 - Adicionar ou remover produtos/serviços do carrinho
 - Processo de finalizar compra (checkout)
-- Inscrição do cliente em boletim informativo
 - Opções para gerenciamento de clientes, produtos e serviços exclusivas para administradores do sistema;
 - **Funcionalidade específica:** o cliente pode selecionar o tipo de residência (casa ou apartamento) e características como iluminação do cômodo, temperatura e arejamento. Com isso, a aplicação oferece sugestões de plantas específicas para as características selecionadas
 
@@ -33,6 +32,10 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
   - *cliente*: id, nome, endereço, telefone e email
   - *produto geral*: id, nome, foto, descrição, preço, quantidade em estoque e quantidade vendida
     - *planta*: além dos atributos padrões, elas possuem tamanho, nível de iluminação, temperatura e manutenção ideais
+
+### Diagrama de Navegação
+<img src="Mockups/nav_diagram.jpg" alt="navigation diagram" width="200"/>
+
 
 ## Comentários Sobre o Código
 ## Plano de Testagem
