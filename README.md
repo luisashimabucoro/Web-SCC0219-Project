@@ -34,7 +34,7 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
     - *planta*: além dos atributos padrões, elas possuem tamanho, nível de iluminação, temperatura e manutenção ideais
 
 ### Diagrama de Navegação
-<img src="Mockups/nav_diagram.png" alt="navigation diagram" width="500"/>
+<img src="Mockups/nav_diagram.png" alt="navigation diagram" width="700"/>
 
 
 ## Comentários Sobre o Código
