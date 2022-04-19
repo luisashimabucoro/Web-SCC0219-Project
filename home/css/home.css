@@ -182,7 +182,44 @@
         cursor: pointer;
         display: inline-block;
         position: relative;
+        padding: 10px;
     }
+
+    #plantasCasa{
+        background-image: url("../images/plantas\ internas.jpg");
+        background-size: cover;
+    }
+
+    #suculentas{
+        background-image:url("../images/suculentas.jpeg");
+        background-size: cover;
+    }
+
+    #arbustos{
+        background-image:url("../images/arbustos.jpg");
+        background-size: cover;
+    }
+
+    #hortinha{
+        background-image:url("../images/hortinha.jpg");
+        background-size: cover;
+    }
+
+    #vasos{
+        background-image:url("../images/vasos.jpg");
+        background-size: cover;
+    }
+
+    #equipamentos{
+        background-image:url("../images/equipamentos.jpg");
+        background-size: cover;
+    }
+
+    #fertilizantes{
+        background-image:url("../images/fertilizantes.jpg");
+        background-size: cover;
+    }
+
 
     .card a{
         display: block;
@@ -212,8 +249,15 @@
         color: white;
         font-family: Amiko;
         font-size: 20px;
-        margin: 0;
-        padding: 25px;
+        margin: 10px;
+        border: 20px;
+        padding: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        display:table-cell;
+        border-radius: 20px;
+        background-color: rgba(59, 70, 67, 0.7);
+        backdrop-filter: blur(5%);
     }
 
     .rodape {
