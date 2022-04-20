@@ -1,0 +1,182 @@
+
+body {
+    font-size: 14px;
+    background: rgba(172,212,171,1);
+    margin: 0;
+}
+
+.barra_superior {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    background: rgba(255,255,255,0.800000011920929);
+    opacity: 1;
+    margin: -7px -0 0px;
+    justify-content: center;
+}
+
+
+.barra_superior a{
+    text-decoration: none;
+    color: #00371A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botoes_barra{
+    font-size: 26px;
+    margin: auto 2rem;
+}
+
+.botoes_barraDIR{
+    margin: auto 2rem;
+    font-size: 26px;
+    float: right;
+    text-underline-offset: 8px;
+    outline: 0;
+}
+
+.buscar{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    text-underline-offset: 8px;
+    width: 300px;
+    border-bottom: 2px solid black;
+}
+
+.buscar:focus{
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    text-underline-offset: 8px;
+    border-bottom: 2px solid black;
+}
+
+.carrinho{
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 10px;
+    margin: 32px 0rem;
+    float: right;
+    background-color:rgb(195, 193, 193);
+}
+
+.login{
+    height: 480px;
+    width: 458px;
+    background-color: #003734;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+
+.titulo_sobre{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #003734;
+}
+
+.texto_sobre{
+    font-size: 24px;
+    font-family: Amiko;
+    margin: auto 40px;
+}
+
+.titulo_fundadores{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #003734;
+}
+
+.cards_fundadores{
+    display: flex;
+    justify-content: center;
+}
+
+.fundador{
+    margin: 50px 60px;
+    font-family: Amiko;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    color: #003734; 
+}
+
+.fundador img{
+    width: 240px;
+    border-radius: 100%;
+}
+
+.fundador h1{
+    margin-bottom: 0px;
+}
+
+.fundador p{
+    margin-top: 0px;
+}
+
+.folha{
+    float: right;
+    width: 150px;
+    transform: scaleX(-1);
+    margin-right: 20px;
+    margin-top: -20px;
+    /* filter: blur(1px); */
+}
+
+.ondinha{
+    background-image: url('../images/detalhe3.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+    height: 271px;
+    top: 1280px;
+    z-index: -1;
+    transform: scaleX(-1);
+}
+
+.rodape {
+    margin-top: 170px;
+    height:240px;  
+    background:rgb(219, 224, 220);
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(20, 102, 20);
+}
+
+.rodape h3{
+    font-size: 30px;
+    color: #00371A;
+}
+.rodape h6{
+    font-size: 22px;
+    color: #00371A;
+
+    margin: -20px 0 20px;
+    font-weight: normal;
+}
+
+.rodape img{
+    margin-left: 20%;
+}
+
+.atendimento{
+    display: inline-block;
+    width: 300px;
+    margin-top: -20px;
+}
+
+.localizacao{
+    width: 500px;
+    margin-top: -20px;
+}
+
+.textinhos{
+    display: flex;
+    margin: 0px 0 0 30px;
+    padding: 20px 0 0;
+}
