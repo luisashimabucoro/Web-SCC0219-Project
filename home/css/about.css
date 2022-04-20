@@ -15,6 +15,10 @@ body {
     justify-content: center;
 }
 
+#sobre{
+    padding: 8px;
+    border-bottom: 2px solid black;
+}
 
 .barra_superior a{
     text-decoration: none;
