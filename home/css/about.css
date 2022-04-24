@@ -106,12 +106,18 @@ body {
     font-weight: bold;
     font-size: 14px;
     text-align: center;
-    color: #003734; 
+    color: #003734;
 }
 
 .fundador img{
     width: 240px;
     border-radius: 100%;
+    border: 5px solid rgba(10,125,56,0.6);
+}
+
+.fundador img:hover{
+    border: 5px solid rgba(10,125,56,1);
+    margin: inherit;
 }
 
 .fundador h1{
