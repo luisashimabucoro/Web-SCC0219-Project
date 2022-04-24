@@ -37,7 +37,7 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
 ### Diagrama de Navegação
 <img src="Mockups/nav_diagram.png" alt="navigation diagram" width="700"/>
 
-
+<a href="https://www.figma.com/file/3dgTdFB6VzP9HX0n41i1g5/Plant-Shop-Website-(Practice-%23001)-(Community)-(Copy)?node-id=0%3A1">Projeto no Figma</a>
 ## Comentários Sobre o Código
 ## Plano de Testagem
 ## Resultado dos Testes
