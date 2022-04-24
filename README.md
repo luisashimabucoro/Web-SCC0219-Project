@@ -24,7 +24,8 @@ Esse projeto consiste no desenvolvimento de uma aplicação online para uma loja
 - Cadastro e Login
 - Adicionar ou remover produtos/serviços do carrinho
 - Processo de finalizar compra (checkout)
-- Opções para gerenciamento de clientes, produtos e serviços exclusivas para administradores do sistema;
+- Filtros de busca de produtos
+- Opções para gerenciamento de clientes, produtos e serviços exclusivas para administradores do sistema
 - **Funcionalidade específica:** o cliente pode selecionar o tipo de residência (casa ou apartamento) e características como iluminação do cômodo, temperatura e arejamento. Com isso, a aplicação oferece sugestões de plantas específicas para as características selecionadas
 
 Para que essas funcionalidades possuam um funcionamento adequado será necessário armazenar as seguintes informações:
