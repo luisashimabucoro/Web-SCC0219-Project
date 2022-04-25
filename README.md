@@ -1,5 +1,9 @@
 # Projeto de Web - Loja de Plantas
 
+- Luísa Balleroni Shimabucoro - 11832385
+- Matheus Bermudes Viana - 11849797
+- Wictor Dalbosco Silva - 11871027
+
 ## Requerimentos
 - O sistema deve ter dois tipos de usuário:
   - *Administradores*: São responsáveis por gerenciar administradores, clientes e podutos. Para utilizar a conta de administrador, utilize as credenciais admin@admin.com:admin no formato (email:senha)
