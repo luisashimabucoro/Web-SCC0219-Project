@@ -5,6 +5,7 @@ body {
     margin: 0;
 }
 
+/* Barra superior de Navegação */
 .barra_superior {
     display: flex;
     width: 100%;
@@ -75,6 +76,7 @@ body {
     text-align: center;
 }
 
+/* Tela em destaque da loja */
 .titulo_loja{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -82,6 +84,7 @@ body {
     color: white;
 }
 
+/* Lista dos produtos em exibição */
 ul{
     margin: auto 0 auto 40px;
     float: right;
@@ -128,6 +131,8 @@ li{
     left: 0;
     right: 0;
 }
+
+/* Menu para escolher as categorias dos produtos */
 .menu_categorias {
     text-align: center;
     margin-left: 20px;
@@ -167,6 +172,7 @@ li{
     text-decoration: none;
 }
 
+/* Botões de alterar páginas */
 .paginas{
     text-align: center;
     width: 100%;
@@ -201,6 +207,7 @@ li{
 
 }
 
+/* Detalhe Estético */
 .ondinha{
     background-image: url('../images/detalhe.png');
     background-repeat: no-repeat;
@@ -212,6 +219,8 @@ li{
     z-index: -1;
 }
 
+
+/* Rodapé */
 .rodape {
     margin-top: 30px;
     height:240px;  
