@@ -26,10 +26,10 @@
 ## Descrição do Projeto
 Esse projeto consiste no desenvolvimento de uma aplicação online para uma loja de plantas, a qual terá as seguintes funcionalidades:
 - Cadastro e Login
-- Adicionar ou remover produtos/serviços do carrinho
+- Adicionar ou remover produtos do carrinho
 - Processo de finalizar compra (checkout)
 - Filtros de busca de produtos
-- Opções para gerenciamento de clientes, produtos e serviços exclusivas para administradores do sistema
+- Opções para gerenciamento de clientes e produtos exclusivas para administradores do sistema
 - **Funcionalidade específica:** o cliente pode selecionar o tipo de residência (casa ou apartamento) e características como iluminação do cômodo, temperatura e tempo disponível para manutenção. Com isso, a aplicação oferece sugestões de plantas que cumprem pelo menos 3 dos 4 critérios
 
 Para que essas funcionalidades possuam um funcionamento adequado será necessário armazenar as seguintes informações:
