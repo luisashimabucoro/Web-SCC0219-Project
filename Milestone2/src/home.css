@@ -1,0 +1,305 @@
+body {
+    font-size: 14px;
+    background: rgba(172,212,171,1);
+    margin: 0;
+}
+.barra_superior {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    background: rgba(255,255,255,0.800000011920929);
+    opacity: 1;
+    margin: -7px -0 0px;
+    justify-content: center;
+}
+
+.barra_superior a{
+    text-decoration: none;
+    color: #00371A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botoes_barra{
+    font-size: 26px;
+    margin: auto 2rem;
+}
+
+.botoes_barraDIR{
+    margin: auto 2rem;
+    font-size: 26px;
+    float: right;
+    text-underline-offset: 8px;
+    outline: 0;
+}
+
+.buscar{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    text-underline-offset: 8px;
+    width: 300px;
+    border-bottom: 2px solid black;
+}
+
+#listabusca{
+    font-size:  1.5em;
+    position: absolute;
+    width: 200px;
+    right: 450px;
+    top: 50px;
+    color: white;
+    font-family: Amiko;
+    background-color: #003734;
+    /* display: none; */
+    /* list-style: none; */
+    /* display: flex; */
+    padding: 10px;
+    display: none;
+}
+ 
+.buscar:focus{
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    text-underline-offset: 8px;
+    border-bottom: 2px solid black;
+}
+
+.carrinho{
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 10px;
+    margin: 32px 0rem;
+    float: right;
+    background-color:rgb(195, 193, 193);
+}
+
+.login{
+    height: 480px;
+    width: 458px;
+    background-color: #003734;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+
+.email{
+    font-size: 30px;
+}
+
+.foto1{
+    height: 900px;
+    background: url("../public/images/fundo.png");
+    height: 1100px;
+    width: 100%;
+    margin-top: 0px;
+    overflow: auto;
+    background-size: cover;
+    text-align: center;
+}
+
+.quiz{
+    background-color: rgb(33, 63, 54, 0.7);
+    backdrop-filter: blur(20px);
+    width: 561px;
+    height: 469px;
+    margin: 116px 0 0 116px;
+}
+
+.buttonQuiz{
+    color: #213F36;
+    background-color: #ADD4AC;
+    font-family: 'Amiko';
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 24px;
+    width: 35%;
+
+    position: absolute;
+    bottom: 0;
+    left: 22%;
+    padding: 20px;
+    margin: 0px 40px 70px 40px;
+}
+
+
+.quiz h1{
+    font-family: Amiko;
+    font-size: 40px;
+    padding: 50px 10px;
+    color: #D2FFCB;
+    text-align: center;
+    width: 480px;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+}
+
+.quiz img{
+    position: absolute;
+    left: 38%;
+    width: 133px;
+    height: 103px;
+}
+
+.ondinha{
+    background-image: url('../public/images/detalhe2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    position: absolute;
+    width: 100%;
+    height: 471px;
+    top: 1000px;
+    z-index: 0;
+    transform: scaleX(-1)
+}
+
+.tipos_produtos{
+    z-index: 2;
+    height: 720px;
+    margin-top: -2px;
+    text-align: center;
+    background-color: #003430;
+}
+.tipos_produtos h1{
+    margin-top: 0;
+    padding: 15px;
+    color: white;
+    font-family: Amiko;
+    font-size: 50px;
+}
+
+.lista_produtos{
+    justify-content: center;    
+}
+
+.slide{
+    width: 280px;
+    height: 225px;
+    background-image: url("../public/images/slide_produto.png");
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+}
+
+#plantasCasa{
+    background-image: url("../public/images/plantas\ internas.jpg");
+    background-size: cover;
+}
+
+#suculentas{
+    background-image:url("../public/images/suculentas.jpeg");
+    background-size: cover;
+}
+
+#arbustos{
+    background-image:url("../public/images/arbustos.jpg");
+    background-size: cover;
+}
+
+#hortinha{
+    background-image:url("../public/images/hortinha.jpg");
+    background-size: cover;
+}
+
+#vasos{
+    background-image:url("../public/images/vasos.jpg");
+    background-size: cover;
+}
+
+#equipamentos{
+    background-image:url("../public/images/equipamentos.jpg");
+    background-size: cover;
+}
+
+#fertilizantes{
+    background-image:url("../public/images/fertilizantes.jpg");
+    background-size: cover;
+}
+
+
+.slide a{
+    display: block;
+}
+
+.linkproduto{
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+    display:flex;
+    list-style-type: none;
+}
+
+li{
+    margin: 0 30px 20px;
+
+}
+
+.lista2{
+    justify-content: center;
+}
+
+.slide h2{
+    text-align: left;
+    color: white;
+    font-family: Amiko;
+    font-size: 20px;
+    margin: 10px;
+    border: 20px;
+    padding: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display:table-cell;
+    border-radius: 20px;
+    background-color: rgba(59, 70, 67, 0.7);
+    backdrop-filter: blur(5%);
+}
+
+.rodape {
+    margin-top: -30px;
+    height:240px;  
+    background:rgb(219, 224, 220);
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(20, 102, 20);
+}
+
+.rodape h3{
+    font-size: 30px;
+    color: #00371A;
+}
+.rodape h6{
+    font-size: 22px;
+    color: #00371A;
+
+    margin: -20px 0 20px;
+    font-weight: normal;
+}
+
+.rodape img{
+    margin-left: 20%;
+}
+
+.atendimento{
+    display: inline-block;
+    width: 300px;
+    margin-top: -20px;
+}
+
+.localizacao{
+    width: 500px;
+    margin-top: -20px;
+}
+
+.textinhos{
+    display: flex;
+    margin: 0px 0 0 30px;
+    padding: 20px 0 0;
+}
