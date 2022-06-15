@@ -1,0 +1,42 @@
+
+.rodape {
+    margin-top: -30px;
+    height:240px;  
+    background:rgb(219, 224, 220);
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(20, 102, 20);
+}
+
+.rodape h3{
+    font-size: 30px;
+    color: #00371A;
+}
+.rodape h6{
+    font-size: 22px;
+    color: #00371A;
+
+    margin: -20px 0 20px;
+    font-weight: normal;
+}
+
+.rodape img{
+    margin-left: 20%;
+}
+
+.atendimento{
+    display: inline-block;
+    width: 300px;
+    margin-top: -20px;
+}
+
+.localizacao{
+    width: 500px;
+    margin-top: -20px;
+}
+
+.textinhos{
+    display: flex;
+    margin: 0px 0 0 30px;
+    padding: 20px 0 0;
+}

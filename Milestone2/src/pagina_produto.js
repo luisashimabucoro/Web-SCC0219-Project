@@ -1,12 +1,19 @@
 import React from 'react';
 import  { useState } from 'react';
-import './produto.css';
+import './styles/produto.css';
 import {returnProduto} from './item_loja';
+
+
 
 function pagina_produto() {
 
+
+    
     const id_produto = window.location.href.substring(window.location.href.lastIndexOf('?') + 1);
-    const produto = returnProduto(id_produto);
+    const [produto, setProduto] = useState(JSON.parse(localStorage.getItem('produto'+id_produto)));
+    // const produto = returnProduto(id_produto);
+    // const produto = JSON.parse(localStorage.getItem('produto'+id_produto));
+
     console.log(produto);
     console.log(id_produto);    
     const [quantidade, setQuantidade] = useState(1);
@@ -14,18 +21,29 @@ function pagina_produto() {
     const diminuirQuantidade = () => {
         if(quantidade > 0) setQuantidade(quantidade-1);
         else setQuantidade(0);
-    }
+    }   
     
     const aumentarQuantidade = () =>{
         if(quantidade < estoque) setQuantidade(quantidade+1);
         else setQuantidade(quantidade);
     }
-
+    const submeter = () => {
+        const produtoAtual = JSON.parse(localStorage.getItem('produto1'));
+        produtoAtual.price = document.getElementById('editaPreco').value;
+        console.log(produtoAtual)
+    
+        localStorage.setItem('produto1', JSON.stringify(produtoAtual));
+        console.log(localStorage.getItem('produto1'));
+        setProduto((produtoAtual));
+        console.log(produto);
+    }
 
     
     return (
         <div className="janela_produto">
             <div className="foto_produto">
+            <input id="editaPreco"></input>
+      <button onClick={submeter}>Editar Preço</button>
             <img className="foto_produto" src={ produto.img} alt=""/>
             </div>
             <div className="info_produto">

@@ -4,6 +4,7 @@ import Home from './home';
 import Header from './header';
 import Sobre from './sobre';
 import Produto from './pagina_produto';
+import Carrinho from './carrinho';
 import {
   BrowserRouter,
   Routes,
@@ -21,6 +22,7 @@ function App() {
           <Route path="/loja" element={<Loja />}/>
           <Route path="/sobre" element={<Sobre />}/>
           <Route path="/produto" element={<Produto />}/>
+          <Route path="/carrinho" element={<Carrinho />}/>
         </Routes>
     </BrowserRouter>
       </div>

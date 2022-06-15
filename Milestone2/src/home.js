@@ -1,4 +1,5 @@
-import './home.css';
+import './styles/home.css';
+import Footer from './footer';
 
 function home(){
     return (
@@ -88,6 +89,7 @@ function home(){
                     </ul>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
