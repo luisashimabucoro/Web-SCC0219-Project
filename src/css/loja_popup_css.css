@@ -1,0 +1,33 @@
+/* -------------------- LOJA POPUP -------------------- */
+
+
+.loja-popup-content {
+    display: inline-block;
+    display: none;
+    position: absolute;
+    top: 130px;
+    right: 300px;
+    background: rgba(255, 255, 255, 0.713);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+#loja-popup {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+#loja-popup p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    color: #00413e;
+    margin: 2px 10px;
+}
+
+#loja-popup p.categoria-geral {
+    color: #001d0e;
+    margin-bottom: 10px;
+}
