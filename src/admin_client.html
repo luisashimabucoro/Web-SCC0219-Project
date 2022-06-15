@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Amiko&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/admin_client.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="login.js"></script>
+    </head>
+	<body>
+		
+<!-- 	Barra de Navegação com popup de login -->
+        <div class="barra_superior">
+            <ul>
+                <li>
+                    <a class="botoes_barra" id="loja" href="loja.html">Loja</a>
+                </li>
+                <li>
+                    <a class="botoes_barra" href="#busca_personalizada">Busca Personalizada</a>
+                </li>
+                <li>
+                    <a class="botoes_barra" id="sobre" href="about.html">Sobre</a>
+                </li>
+                <li>
+                    <a class="botoes_barra" id="home" href="home.html">
+                        <img src="images/logo_fundo_branco.png" style="width: 133px; height: 103px; margin-left: 10%;">
+                    </a>
+                </li>
+                <li>
+                    <input type="text" class="botoes_barraDIR buscar" placeholder="Buscar">
+                </li>
+                <li id="login">
+                    <a class="botoes_barraDIR" id="login-trigger" href="#">Login <span>▼</span></a>
+                    <div class="login-content" id="login-popup">
+                        <form>
+                          <fieldset id="inputs">
+                            <input  id="username"
+                                    type="email"
+                                    name="E-mail"
+                                    placeholder="Email"
+                                    required>
+                            <input  id="password"
+                                    type="password"
+                                    name="Password"
+                                    placeholder="Senha"
+                                    required>
+                          </fieldset>
+                          <fieldset id="actions">
+                            <input  type="submit"
+                                    id="submit"
+                                    value="Login">
+                            <p id="legenda-cadastro"> Não tenho conta ainda</p>
+                            <input  type="submit"
+                            id="submit"
+                            value="Cadastre-se">
+                          </fieldset>
+                        </form>
+                      </div>
+                </li>
+                <li>
+                    <a class="carrinho" href="#carrinho">Carrinho</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Painel de edição de clientes -->
+        <div class="edit-panel">
+            <h1> Clientes </h1>
+            <div class="client-element">
+                <p>Cliente A</p>
+                <p> XXX </p>
+                <p> YYYY </p>
+                <a href="#">
+                    <img src="images/edit_button.png" alt="Botão de editar">
+                </a>
+            </div>
+            <div class="client-element">
+                <p>Cliente B</p>
+                <p> XXX </p>
+                <p> YYYY </p>
+                <a href="#">
+                    <img src="images/edit_button.png" alt="Botão de editar">
+                </a>
+            </div>
+            <div class="client-element">
+                <p>Cliente C</p>
+                <p> XXX </p>
+                <p> YYYY </p>
+                <a href="#">
+                    <img src="images/edit_button.png" alt="Botão de editar">
+                </a>
+            </div>
+            <div class="client-element">
+                <p>Cliente D</p>
+                <p> XXX </p>
+                <p> YYYY </p>
+                <a href="#">
+                    <img src="images/edit_button.png" alt="Botão de editar">
+                </a>
+            </div>
+            <div class="client-element">
+                <p>Cliente E</p>
+                <p> XXX </p>
+                <p> YYYY </p>
+                <a href="#">
+                    <img src="images/edit_button.png" alt="Botão de editar">
+                </a>
+            </div>
+            <div class="client-element">
+                <p>Cliente F</p>
+                <p> XXX </p>
+                <p> YYYY </p>
+                <a href="#">
+                    <img src="images/edit_button.png" alt="Botão de editar">
+                </a>
+            </div>
+            <div class="client-element">
+                <p>Cliente G</p>
+                <p> XXX </p>
+                <p> YYYY </p>
+                <a href="#">
+                    <img src="images/edit_button.png" alt="Botão de editar">
+                </a>
+            </div>
+        </div>
+
+        <!-- 	Detalhe Estético -->
+        <div class="ondinha">
+            <img src="images/detalhe.png" alt="Detalhe onda verde">
+        </div>
+
+    
+<!-- 	Rodapé -->
+        <div class="rodape">
+            <div class="textinhos">
+                <div class="atendimento">
+                    <h3>ATENDIMENTO</h3>
+                    <h6><b>Email:</b> plantcare@gmail.com</h6>
+                    <h6><b>Tel:</b> (16) 99999 - 9999</h6>
+                    <br>
+                    <h6 style="font-weight: normal;">Disponível de segunda à <br>sexta, 8h00-18h00</h6>
+                </div>
+                <div class="localizacao">
+                    <h3>LOCALIZAÇÃO</h3>
+                    <h6><b>Endereço:</b> Rua das Florestas São Carlenses, 48   - São Carlos, SP - 19816-000</h6>
+                    <br>
+                    <h6><b>Ponto de Referência:</b> Savegnago (Loja 2) </h6>
+                </div>
+            </div>
+            <img src="images/logo_fundo_branco.png">
+        </div>
+	</body>
+
+</html>
