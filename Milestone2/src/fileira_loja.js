@@ -3,9 +3,22 @@ import Itemlista from './item_loja';
 import  { useState } from 'react';
 
 
+
+
 function fileira (){
+   for (let i =0; i<42; i++){
+    console.log(localStorage.getItem('produto'+i));
+  }
+  const [products, setProdutos] = useState("R$50")
 
   const [numero, setNumero] = useState(0);
+  const [values, setValues] = useState({
+    id: 1,
+    img: "",
+    nome: "",
+    price: 0,
+  });
+
   if(numero < 0 ){
     numero = 0;
   }
@@ -26,6 +39,7 @@ function fileira (){
         <div className="titulo_loja">
           <h1>Plantas</h1>
         </div>
+      
       <div className="pagina_loja"> 
           <ul>
             <Itemlista index={indexProduto[0]} coluna={1}/>
@@ -44,7 +58,6 @@ function fileira (){
             <Itemlista index={indexProduto[9]} coluna={2}/>
             <Itemlista index={indexProduto[10]} coluna={3}/>
             <Itemlista index={indexProduto[11]} coluna={4}/>
-          
           </ul>
           <div className="menu_categorias">
                 <h2>Categorias</h2>
@@ -54,7 +67,6 @@ function fileira (){
                 <a href="#">Ervas & Vegetais</a><br/>
         </div>
       </div>
-
 
         <div className="paginas">
         <button type="button" onClick={handle_prev} className="pagebutton">Anterior</button>

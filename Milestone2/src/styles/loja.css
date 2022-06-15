@@ -163,7 +163,7 @@ li{
 }
 
 .ondinha{
-    background-image: url('../public/images/detalhe.png');
+    background-image: url('../../public/images/detalhe.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;

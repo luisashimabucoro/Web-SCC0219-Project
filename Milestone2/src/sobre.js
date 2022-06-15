@@ -1,12 +1,12 @@
-import './sobre.css'
+import './styles/sobre.css'
 function sobre(){
     return (
         <div>
-            <div class="titulo_sobre">
+            <div className="titulo_sobre">
                 <h1>Sobre</h1>
             </div>
             
-            <div class="texto_sobre">
+            <div className="texto_sobre">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Suspendisse metus lacus, congue eget fermentum vel, dignissim nec magna.
             Vivamus eget diam mollis, ultrices purus et, dignissim ex. Fusce sollicitudin
@@ -19,32 +19,32 @@ function sobre(){
             Mauris et tortor ligula. Phasellus eu libero dictum, commodo nibh in, mattis nisl.
             </div>
             
-            <div class="titulo_fundadores">
+            <div className="titulo_fundadores">
                 <h1>Fundadores</h1>
             </div>
 
-            <div class="cards_fundadores">
-                <div class="fundador">
+            <div className="cards_fundadores">
+                <div className="fundador">
                     <img src="images/luisa.png"/>
                     <h1>Luísa<br/>Shimabucoro</h1>
                     <p>-</p>
                     <p>Lorem Ipsum</p>
                 </div>
-                <div class="fundador">
+                <div className="fundador">
                     <img src="images/matheus.jpg"/>
                     <h1>Matheus<br/>Bermudes</h1>
                     <p>-</p>
                     <p>Lorem Ipsum</p>
                 </div>
-                <div class="fundador">
+                <div className="fundador">
                     <img src="images/wictor.png"/>
                     <h1>Wictor<br/>Dalbosco</h1>
                     <p>-</p>
                     <p>Lorem Ipsum</p>
                 </div>
             </div>
-            <img class="folha" src="images/folha.png"/>
-            <div class="ondinha">
+            <img className="folha" src="images/folha.png"/>
+            <div className="ondinha">
 
         </div>
         </div>

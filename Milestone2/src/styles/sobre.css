@@ -55,7 +55,7 @@
 }
 
 .ondinha{
-    background-image: url('../public/images/detalhe3.png');
+    background-image: url('../../public/images/detalhe3.png');
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
