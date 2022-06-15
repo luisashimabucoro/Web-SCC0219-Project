@@ -10,10 +10,18 @@ body {
     display: flex;
     width: 100%;
     height: 125px;
-    background: rgba(255,255,255,0.800000011920929);
+    background: #fff;
     opacity: 1;
     margin: -7px -0 0px;
     justify-content: center;
+}
+
+.barra_superior li {
+    display: flex;
+    /* width: 100%; */
+    height: 125px;
+    margin: -7px -0 0px;
+    /* justify-content: center; */
 }
  
 .barra_superior a{
@@ -270,12 +278,14 @@ li{
     backdrop-filter: blur(5%);
 }
 
-
 /* Rodapé */
 .rodape {
-    margin-top: -30px;
-    height:240px;  
-    background:rgb(219, 224, 220);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    height:200px;  
+    background:#fff;
     display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:rgb(20, 102, 20);
@@ -294,7 +304,11 @@ li{
 }
 
 .rodape img{
-    margin-left: 20%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 250px; 
+    height: 200px;
 }
 
 .atendimento{
@@ -312,4 +326,137 @@ li{
     display: flex;
     margin: 0px 0 0 30px;
     padding: 20px 0 0;
+}
+
+
+
+/* -------------------- LOGIN e CADASTRO POPUP -------------------- */
+
+#login-trigger{
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 8px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+  }
+
+#login-trigger {
+    border-radius: 3px 0 0 3px;
+  }
+
+.login-content {
+    display: none;
+    position: absolute;
+    top: 90px;
+    background: #082c2c;
+    border-radius: 12px;
+}
+
+li #login-popup {
+    right: 700px;
+    width: 210px;
+    height: 230px;
+}
+
+li #cadastro-popup {
+    right: 700px;
+    width: 210px;
+    height: 290px;
+}
+
+input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#inputs input {
+    padding: 6px 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    width: 150px;
+    margin-top: 5%;
+
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login-content ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  #inputs input:focus {
+    background-color: #487c6475;
+    border-radius: 3px 3px 0 0;
+    color: white;
+    outline: none;
+  }
+
+  #login #actions {
+    margin: 10px 0 0 0;
+  }
+
+#login #submit {
+    background-color: #487c64;
+    border-radius: 20px;
+    height: 30px;
+    padding: 0;
+    width: 170px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+}
+
+#legenda-cadastro {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+  #login #submit:hover,
+  #login #submit:focus {
+    background-color: #559376;
+  }
+
+  #login #submit:active {
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  #login label {
+    float: right;
+    line-height: 30px;
+  }
+
+  #login label input {
+    position: relative;
+    top: 2px;
+    right: 2px;
+  }
+
+  fieldset {
+    border: 0;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
 }
