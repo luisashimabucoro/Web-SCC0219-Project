@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Amiko&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/editar_produto.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="login.js"></script>
+    </head>
+	<body>
+		
+<!-- 	Barra de Navegação com popup de login -->
+        <div class="barra_superior">
+            <ul>
+                <li>
+                    <a class="botoes_barra" id="loja" href="loja.html">Loja</a>
+                </li>
+                <li>
+                    <a class="botoes_barra" href="#busca_personalizada">Busca Personalizada</a>
+                </li>
+                <li>
+                    <a class="botoes_barra" id="sobre" href="about.html">Sobre</a>
+                </li>
+                <li>
+                    <a class="botoes_barra" id="home" href="home.html">
+                        <img src="images/logo_fundo_branco.png" style="width: 133px; height: 103px; margin-left: 10%;">
+                    </a>
+                </li>
+                <li>
+                    <input type="text" class="botoes_barraDIR buscar" placeholder="Buscar">
+                </li>
+                <li id="login">
+                    <a class="botoes_barraDIR" id="login-trigger" href="#">Login <span>▼</span></a>
+                </li>
+                <li>
+                    <a class="carrinho" href="#carrinho">Carrinho</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 	Detalhe Estético -->
+        <!-- <div class="ondinha">
+            <img src="images/detalhe.png" alt="Detalhe onda verde">
+        </div> -->
+
+        <!-- Produto -->
+        <div class="janela_produto">
+            <!-- <div class="foto_produto">
+                <img class="foto_produto" src="" alt=""/>
+            </div> -->
+
+            <div class="info_produto">
+                <div class="info-text-fields">
+                    <p>Nome do Produto</p>
+                    <input class="info-inputs" type="text" >
+                    <p>Preço Unitário</p>
+                    <input class="info-inputs" type="text" >
+                    <p>Estoque Disponível</p>
+                    <input class="info-inputs" type="number" >
+                    <p>Link da Imagem</p>
+                    <input class="info-inputs" type="url" >
+
+                    
+                </div>
+                <div class="info-buttons">
+
+                    <p>Tamanho</p>
+                    <div class="radio-atributos">
+                        <input type="radio" id="tamanho-pequeno"  name="tamanho" value="pequeno">
+                        <label for="tamanho-pequeno">Pequeno</label><br>
+    
+                        <input type="radio" id="tamanho-medio"  name="tamanho" value="medio">
+                        <label for="tamanho-medio">Médio</label><br>
+    
+                        <input type="radio" id="tamanho-grande"  name="tamanho" value="grande">
+                        <label for="tamanho-grande">Grande</label>
+                    </div>
+    
+                    <p>Iluminação</p>
+                    <div class="radio-atributos">
+                        <input type="radio" id="iluminacao-baixa"  name="iluminacao" value="baixa">
+                        <label for="iluminacao-baixa">Sombra</label><br>
+    
+                        <input type="radio" id="iluminacao-media"  name="iluminacao" value="media">
+                        <label for="iluminacao-media">Meia-sombra</label><br>
+    
+                        <input type="radio" id="iluminacao-alta"  name="iluminacao" value="alta">
+                        <label for="iluminacao-alta">Sol</label>
+                    </div>
+    
+                    <p>Temperatura</p>
+                    <div class="radio-atributos">
+                        <input type="radio" id="temperatura-baixa"  name="temperatura" value="baixa">
+                        <label for="temperatura-baixa">Baixa</label><br>
+    
+                        <input type="radio" id="temperatura-media"  name="temperatura" value="media">
+                        <label for="temperatura-media">Média</label><br>
+    
+                        <input type="radio" id="temperatura-alta"  name="temperatura" value="alta">
+                        <label for="temperatura-alta">Alta</label>
+                    </div>
+    
+                    <p>Manutenção</p>
+                    <div class="radio-atributos">
+                        <input type="radio" id="manutencao-baixa"  name="manutencao" value="baixa">
+                        <label for="manutencao-baixa">Baixa</label><br>
+    
+                        <input type="radio" id="manutencao-media"  name="manutencao" value="media">
+                        <label for="manutencao-media">Média</label><br>
+    
+                        <input type="radio" id="manutencao-alta"  name="manutencao" value="alta">
+                        <label for="manutencao-alta">Alta</label>
+                    </div>
+                </div>
+                  
+                
+
+            </div>
+
+            <div class="descricao_produto">
+                <h1>Descrição:</h1>
+                <!-- <p>O Musgo de Clube não é exatamente um musgo nem uma samambaia, mas tem parentesco com o último. Essa planta incomum e exótica se faz uma planta de interior exelente em ambientes de luz indireta. Elas amam água então é recomendado mantê-las com a terra sempre úmida. O Musgo do Clube é muito fácil de cuidar! Elas são ótimas para terrários e pequenos jardins. Essa planta é classificada como uma Lycopodiophyta, uma descendente de plantas produtoras de esporos que datam de aproximadamente</p> -->
+                <textarea id="w3review" name="w3review" rows="4" cols="100" maxlength="1500">
+                    
+                </textarea>
+            </div>
+
+            <button id="salvar">Salvar</button>
+        </div>
+
+    
+<!-- 	Rodapé -->
+        <div class="rodape">
+            <div class="textinhos">
+                <div class="atendimento">
+                    <h3>ATENDIMENTO</h3>
+                    <h6><b>Email:</b> plantcare@gmail.com</h6>
+                    <h6><b>Tel:</b> (16) 99999 - 9999</h6>
+                    <br>
+                    <h6 style="font-weight: normal;">Disponível de segunda à <br>sexta, 8h00-18h00</h6>
+                </div>
+                <div class="localizacao">
+                    <h3>LOCALIZAÇÃO</h3>
+                    <h6><b>Endereço:</b> Rua das Florestas São Carlenses, 48   - São Carlos, SP - 19816-000</h6>
+                    <br>
+                    <h6><b>Ponto de Referência:</b> Savegnago (Loja 2) </h6>
+                </div>
+            </div>
+            <img src="images/logo_fundo_branco.png">
+        </div>
+	</body>
+
+</html>
