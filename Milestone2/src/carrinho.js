@@ -3,39 +3,36 @@ import  { useState } from 'react';
 import './styles/carrinho.css';
 import {returnProduto} from './item_loja';
 import Footer from './footer';
-
+import CardProduto from './card_produto';
+import PrecoTotal from './preco_total';
 
 function carrinho(){
-    const [qnt, setQnt] = useState(1);
-    const preco = 9*qnt;
-    const diminuirQuantidade = () => {
-        setQnt(qnt-1);
-    }   
-    
-    const aumentarQuantidade = () =>{
-        setQnt(qnt+1);
-    }
+
+    let [preco, setPreco] = useState(
+        localStorage.getItem('preco_total')
+    )
+    console.log("preço: " + localStorage.getItem('preco_total'));
+    setInterval(() => setPreco(localStorage.getItem('preco_total')), 500);
+
 
     return(
-        <div>
+        <div className="parent">
 
         <div className="background_carrinho">
             <div className="janela_carrinho">
                 <h1 className="titulo_carrinho">Carrinho</h1>
                 <hr/>
                 <div className="produtos_carrinho">
-                    <div className="linha_produto">
-                        <div className="botao_apagar">x</div>
-                        <img className="carrinho_foto_produto" src="https://static3.tcdn.com.br/img/img_prod/475075/vaso_decorativo_planta_podocarpus_verde_13cm_23325_1_20201213202627.jpg"/>
-                        <p className="carrinho_nome_produto">Planta AA</p>
-                        <p onClick={() => setQnt(diminuirQuantidade)}  className="carrinho_diminuir_quantidade">-</p>
-                        <p className="carrinho_quantidade_atual">{qnt}</p>
-                        <p onClick={() => setQnt(aumentarQuantidade)} className="carrinho_aumentar_quantidade">+</p>
-                        <p className="carrinho_preco_produto">R$ {preco}</p>
-                    </div>
-
+                    <CardProduto index={1} />
+                    <hr/>
+                    <CardProduto index={2} />
                     <hr/>
                 </div>
+                {/* <PrecoTotal /> */}
+                <p className="carrinho_precoFinal">Preço Total: R${preco}</p>
+                <a href="finalizar_compra">
+                    <div className="botao_finalizar_compra">Finalizar Compra</div>
+                </a>
             </div>
         </div>
         <Footer />

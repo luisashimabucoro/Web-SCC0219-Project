@@ -7,12 +7,14 @@
     --letra_clara: #D2FFCB;
 }
 .background_carrinho{
-    height: 724px;
+    height: 1164px;
+
 }
+
 
 .janela_carrinho{
     width: 1052px;
-    height: 594px;
+    height: 860px;
     background-color: var(--verde_escuro);
     margin: 67px auto;
     padding: 40px 90px;
@@ -27,7 +29,7 @@
 .produtos_carrinho{
     margin-top: 28px;
     background-color: var(--verde_claro);
-    height: 400px;
+    height: 520px;
     
 }
 
@@ -88,4 +90,24 @@
 }
 .carrinho_preco_produto{
     margin-left: 50px;
+}
+
+.carrinho_precoFinal{
+    color: var(--verde_claro);
+    font-size: 40px;
+    float: right;
+    height: 40px;
+}
+
+.botao_finalizar_compra{
+    float: right;
+    font-size: 40px;
+    background-color: var(--verde_claro);
+    color: var(--verde_escuro);
+    padding: 10px 60px;
+    border-radius: 40px;
+    margin-top: 30px;
+    margin-left: 50%;
+    height: 80px;
+    
 }

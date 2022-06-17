@@ -1,7 +1,12 @@
 
 .rodape {
-    margin-top: -30px;
-    height:240px;  
+    /* margin-top: -30px; */
+    position:absolute;
+    left:0;
+    bottom:-240px;
+    right:0;
+    height:240px;
+    padding: 20px;
     background:rgb(219, 224, 220);
     display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -11,6 +16,7 @@
 .rodape h3{
     font-size: 30px;
     color: #00371A;
+    margin-bottom: 20px;
 }
 .rodape h6{
     font-size: 22px;
@@ -33,10 +39,20 @@
 .localizacao{
     width: 500px;
     margin-top: -20px;
+    margin-left: 120px;
 }
 
 .textinhos{
     display: flex;
     margin: 0px 0 0 30px;
     padding: 20px 0 0;
+}
+
+.logomarca{
+    margin-left: 20%;
+    height: 200px;
+    width: 350px;
+    background-image: url('../../public/images/logo_fundo_branco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }

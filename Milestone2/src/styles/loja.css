@@ -10,7 +10,8 @@
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
-    color: white;
+    color: var(--verde_escuro);
+    margin: 40px auto;
 }
 
 .pagina_loja{
@@ -89,6 +90,13 @@ li{
     left: 0;
     right: 0;
 }
+
+.imagem_card_produto{
+    height: 248px;
+    width: 248px;
+    padding: 20px;
+}
+
 .menu_categorias {
     grid-column: 1;
     grid-row: 1;
@@ -129,16 +137,20 @@ li{
 }
 
 .paginas{
+    height: 110px;
     text-align: center;
     width: 100%;
     font-size: 20px;
+    margin: 35px auto;
 }
 
-.paginas .pagebutton{
-    color: #213F36;
-    background-color: #ADD4AC;
-    font-family: 'Amiko';
+.paginas .loja_pagebutton{
+
+    font-family: 'Segoe UI';
+    font-size: 25px;
     font-weight: bold;
+    background-color: var(--verde_claro);
+    color: var(--verde_escuro);
     
     padding: 20px;
     border-radius: 40px;
@@ -146,14 +158,15 @@ li{
 }
 
 .page_number{
-    font-family: 'Amiko';
+    font-family: 'Segoe UI';
+    font-size: 25px;
     font-weight: bold;
-    color: #213F36;
-    background-color: #ADD4AC;
+    background-color: var(--verde_claro);
+    color: var(--verde_escuro);
 
     margin: 0 20px;
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
     padding: 20px;
     display: inline-flex;
     justify-content: center;
@@ -162,13 +175,14 @@ li{
 
 }
 
-.ondinha{
+.loja_ondinha{
     background-image: url('../../public/images/detalhe.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     width: 100%;
     height: 471px;
-    top: 1380px;
+    top: 1180px;
     z-index: -1;
 }
+
