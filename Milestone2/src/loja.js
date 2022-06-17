@@ -1,11 +1,14 @@
 import React from 'react';
-import Fileira from './fileira_loja'
+import Fileira from './display_loja'
 import './styles/loja.css';
+import Footer from './footer';
 
-function loja(){
+function loja(tipo_produto){
     return (
-
-        <Fileira pageNumber={0} />
+        <div className="parent">
+            <Fileira tipo_produto={tipo_produto.tipo_produto} />
+            <Footer />
+        </div>
         
     )
 }

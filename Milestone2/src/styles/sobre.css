@@ -1,6 +1,7 @@
 .titulo_sobre{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-size: 40px;
     color: #003734;
 }
@@ -14,6 +15,7 @@
 .titulo_fundadores{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-size: 40px;
     color: #003734;
 }
@@ -51,17 +53,18 @@
     transform: scaleX(-1);
     margin-right: 20px;
     margin-top: -20px;
-    /* filter: blur(1px); */
+    filter: blur(5px);
 }
 
-.ondinha{
+.sobre_ondinha{
     background-image: url('../../public/images/detalhe3.png');
     background-repeat: no-repeat;
     background-size: 100%;
-    position: absolute;
-    width: 100%;
-    height: 271px;
-    top: 1280px;
+    position: relative;
+    height: 200px;
+    /* width: 100%; */
+    /* height: 271px; */
+    /* top: 1280px; */
     z-index: -1;
     transform: scaleX(-1);
 }

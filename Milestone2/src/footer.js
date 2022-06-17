@@ -20,7 +20,8 @@ function footer(){
                     <h6><b>Ponto de Referência:</b> Savegnago (Loja 2) </h6>
                 </div>
             </div>
-            <img src="../../public/images/logo_fundo_branco.png"/>
+            <div className="logomarca"></div>
+            {/* <img src="../../public/images/logo_fundo_branco.png"/> */}
         </div>
     )
 }

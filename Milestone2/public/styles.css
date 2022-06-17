@@ -8,3 +8,8 @@
     --cor_letra: #CCD7D6;
     --verde_claro: #ADD4AC;
 }
+
+.parent{
+    position: relative;
+    min-height: 100vh;
+}

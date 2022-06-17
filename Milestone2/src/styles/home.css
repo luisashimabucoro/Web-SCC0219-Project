@@ -1,91 +1,7 @@
 body {
     font-size: 14px;
     background: rgba(172,212,171,1);
-    margin: 0;
-}
-.barra_superior {
-    display: flex;
-    width: 100%;
-    height: 125px;
-    background: rgba(255,255,255,0.800000011920929);
-    opacity: 1;
-    margin: -7px -0 0px;
-    justify-content: center;
-}
-
-.barra_superior a{
-    text-decoration: none;
-    color: #00371A;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.botoes_barra{
-    font-size: 26px;
-    margin: auto 2rem;
-}
-
-.botoes_barraDIR{
-    margin: auto 2rem;
-    font-size: 26px;
-    float: right;
-    text-underline-offset: 8px;
-    outline: 0;
-}
-
-.buscar{
-    background-color: rgba(255, 255, 255, 0);
-    border: 0;
-    text-underline-offset: 8px;
-    width: 300px;
-    border-bottom: 2px solid black;
-}
-
-#listabusca{
-    font-size:  1.5em;
-    position: absolute;
-    width: 200px;
-    right: 450px;
-    top: 50px;
-    color: white;
-    font-family: Amiko;
-    background-color: #003734;
-    /* display: none; */
-    /* list-style: none; */
-    /* display: flex; */
-    padding: 10px;
-    display: none;
-}
- 
-.buscar:focus{
-    outline: 0;
-    background-color: rgba(255, 255, 255, 0);
-    border: 0;
-    text-underline-offset: 8px;
-    border-bottom: 2px solid black;
-}
-
-.carrinho{
-    border-radius: 10px;
-    font-size: 26px;
-    padding: 10px;
-    margin: 32px 0rem;
-    float: right;
-    background-color:rgb(195, 193, 193);
-}
-
-.login{
-    height: 480px;
-    width: 458px;
-    background-color: #003734;
-    position: absolute;
-    top: 100px;
-    right: 20px;
-    backdrop-filter: blur(20px);
-    text-align: center;
-}
-
-.email{
-    font-size: 30px;
+    margin: 0;  
 }
 
 .foto1{
@@ -145,7 +61,7 @@ body {
     height: 103px;
 }
 
-.ondinha{
+/* .ondinha{
     background-image: url('../../public/images/detalhe2.png');
     background-repeat: no-repeat;
     background-size: 100% 50%;
@@ -155,7 +71,7 @@ body {
     top: 1000px;
     z-index: 0;
     transform: scaleX(-1)
-}
+} */
 
 .tipos_produtos{
     z-index: 2;
@@ -260,46 +176,4 @@ li{
     border-radius: 20px;
     background-color: rgba(59, 70, 67, 0.7);
     backdrop-filter: blur(5%);
-}
-
-.rodape {
-    margin-top: -30px;
-    height:240px;  
-    background:rgb(219, 224, 220);
-    display: flex;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:rgb(20, 102, 20);
-}
-
-.rodape h3{
-    font-size: 30px;
-    color: #00371A;
-}
-.rodape h6{
-    font-size: 22px;
-    color: #00371A;
-
-    margin: -20px 0 20px;
-    font-weight: normal;
-}
-
-.rodape img{
-    margin-left: 20%;
-}
-
-.atendimento{
-    display: inline-block;
-    width: 300px;
-    margin-top: -20px;
-}
-
-.localizacao{
-    width: 500px;
-    margin-top: -20px;
-}
-
-.textinhos{
-    display: flex;
-    margin: 0px 0 0 30px;
-    padding: 20px 0 0;
 }

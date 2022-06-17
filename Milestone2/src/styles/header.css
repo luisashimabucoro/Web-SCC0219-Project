@@ -76,6 +76,15 @@
     font-size: 30px;
 }
 
+#home{
+  margin-top: 12px;
+  height: 150px;
+  width: 150px;
+  background-image: url('../../public/images/logo_fundo_branco.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 /* -------------------- LOGIN e CADASTRO POPUP -------------------- */
 
 #login-trigger{
@@ -102,6 +111,7 @@
 }
 
 li #login-popup {
+  z-index: 1;
     right: 300px;
     width: 210px;
     height: 230px;
@@ -205,4 +215,41 @@ input {
   outline: 0;
   background: transparent;
   border-bottom: 1px solid black;
+}
+
+/* -------------------- LOJA POPUP -------------------- */
+
+
+
+#loja-popup {
+  display: grid;
+  /* display: none; */
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.loja-popup-content {
+  /* display: inline-block; */
+  display: none;
+  position: absolute;
+  top: 60px;
+  padding-top: 2  0px;
+  left: 250px;
+  background: rgba(255, 255, 255, 0.913);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+#loja-popup p{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  color: #00413e;
+  margin: 2px 10px;
+}
+
+#loja-popup p.categoria-geral {
+  color: #001d0e;
+  margin-bottom: 10px;
 }
