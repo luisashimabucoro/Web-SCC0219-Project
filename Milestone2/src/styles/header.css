@@ -61,6 +61,16 @@
     background-color:rgb(195, 193, 193);
 }
 
+.logout{
+  border-radius: 10px;
+  font-size: 26px;
+  padding: 10px;
+  margin: 32px 0rem 32px 1rem;
+  float: right;
+  color: white !important;
+  background-color: rgb(162, 101, 101);
+}
+
 .login{
     height: 480px;
     width: 458px;
@@ -250,6 +260,7 @@ input {
 }
 
 #loja-popup p.categoria-geral {
+  font-size: 28px;
   color: #001d0e;
   margin-bottom: 10px;
 }

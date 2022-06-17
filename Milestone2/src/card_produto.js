@@ -8,13 +8,11 @@ function card_produto(index){
     const [qnt, setQnt] = useState(
         localStorage.getItem(`quantidade_produto${index.index}`)
     );
-    // const produtos = []
-    // for ( let i = 0; i < 5; i++ ) {
-    //     produtos[i] = JSON.parse(localStorage.getItem(`carrinho_produto${i}`));
-    // }
+
     let [produtoCarrinho, setProduto] = useState(
         JSON.parse(localStorage.getItem(`carrinho_produto${index.index}`))
     )
+    
     const deletar_produto = () => {
         setProduto(null);
         localStorage.setItem('preco_total', parseInt(localStorage.getItem('preco_total')) - parseInt(produtoCarrinho.price) * qnt);

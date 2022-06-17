@@ -1,7 +1,12 @@
 function card_admin_products(props){
 
     const indice = props.indice;
-    const produto_atual = JSON.parse(localStorage.getItem('produto'+indice));
+    let produto_atual;
+    try{
+         produto_atual = JSON.parse(localStorage.getItem('produto'+indice));
+    }catch(e){
+        console.log(e);
+    }
 
     
     if(produto_atual != null){
