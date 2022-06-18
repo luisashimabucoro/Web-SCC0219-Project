@@ -4,7 +4,7 @@ import PaginaProduto from './pagina_produto';
 var aviso_produtoNaoEncontrado = false;
 
 class Produto {
-  constructor(id, name, img, price, estoque, tipo, subtipo){
+  constructor(id, name, img, price, estoque, tipo, subtipo, tamanho, iluminacao, temperatura, manutencao){
     this.id = id;
     this.name = name;
     this.img = img;
@@ -12,6 +12,12 @@ class Produto {
     this.estoque = estoque;
     this.tipo = tipo;
     this.subtipo = subtipo;
+
+    this.tamanho = tamanho;
+    this.iluminacao = iluminacao;
+    this.temperatura = temperatura;
+    this.manutencao = manutencao;
+
   }
 }
 
@@ -29,7 +35,11 @@ function addProduto(){
       20.00,
       3,
       "planta",
-      "interior"
+      "interior",
+      "medio",
+      "media",
+      "media",
+      "pouca"
       ))
   }
   for (let i = 5; i < 20; i++) {
@@ -40,7 +50,11 @@ function addProduto(){
       10.00,
       3,
       "planta",
-      "bulbo"
+      "bulbo",
+      "pequeno",
+      "pouca",
+      "media",
+      "pouca"
       ))
   }
   for (let i = 20; i < 30; i++) {
@@ -66,8 +80,6 @@ function addProduto(){
       ))
   }
 
-
-  
 }
 
 function addiProduto(){
@@ -116,14 +128,24 @@ function buscaSubCategoria(subtipo, indice){
   }
 }
 
+function buscaPersonalizada(aspectos_planta, indice){
+  atualiza_vetor_produtos();
+  console.log(aspectos_planta);
+  console.log(products[5]);
+  try{
+    console.log("personalizando...");
+    return products.filter(produto => produto.tamanho == aspectos_planta.tamanho && produto.iluminacao == aspectos_planta.iluminacao && produto.temperatura == aspectos_planta.temperatura && produto.manutencao == aspectos_planta.manutencao)[indice];
+  } catch(e){
+    console.log(e);
+  }
+}
 
 function buscaProduto(termo_buscado, indice){
   // console.log(products);
   atualiza_vetor_produtos();
   try{
-    return products.filter(produto => produto.name.toLowerCase().includes(termo_buscado.toLowerCase()))[indice];
+    return products.filter(produto => produto.name.toLowerCase().includes(termo_buscado.toLowerCase()) || produto.subtipo.toLowerCase().includes(termo_buscado.toLowerCase()) || produto.tipo.toLowerCase().includes(termo_buscado.toLowerCase())  )[indice];
   } catch(e){
-    console.log("IRRAAAAAAAAAAAAA")
     console.log(e);
   }
 }
@@ -134,30 +156,36 @@ function produtos(props){
   let todos_subtipos = ["interior", "horta", "arvore", "bulbo", "ceramica", "plastico", "adubo", "equipamento"];
   const indice = props.index;
   const coluna = props.coluna;
-  const tipo_produto = props.tipo;
-
+  let tipo_produto = props.tipo;
+  let produto_atual;
   let subtipo_produto;
+
   if(todos_subtipos.includes(tipo_produto)){
     subtipo_produto = tipo_produto;
   }
 
-  // let produtos_selecionados = [];
-  let produto_atual;
-
-  // console.log(subtipo_produto);
-
-  if (subtipo_produto != undefined){
+  if(tipo_produto == "busca_personalizada"){
+    console.log("busca_personalizada")
+    let aspectos = JSON.parse(localStorage.getItem('busca_personalizada'));
+    produto_atual = buscaPersonalizada(aspectos, indice);
+  }else if (subtipo_produto != undefined){
+    console.log("buscaSubCategoria")
     produto_atual = buscaSubCategoria(subtipo_produto, indice);
   }else if(tipo_produto == "loja") {
+    console.log("Loja")
+
     try{
       produto_atual = JSON.parse(localStorage.getItem(`produto${indice}`));
     }catch(err){
       console.log(err);
     }
   }else if(tipo_produto == "busca"){
+    console.log("busca por nome")
+
     let termo_buscado = localStorage.getItem('busca');
     produto_atual = buscaProduto(termo_buscado, indice);
   }else{
+    console.log("buscaCategoria")
     produto_atual = buscaCategoria(tipo_produto, indice);
   }
 

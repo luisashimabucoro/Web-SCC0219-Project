@@ -95,7 +95,7 @@ function editar_produto(){
                             <option value="ceramica">Cerâmica</option>
                             <option value="plastico">Plástico</option>
                             <option value="adubo">Adubos & Fertilizantes</option>
-                            <option value="fertilizante">Equipamentos</option>
+                            <option value="equipamento">Equipamentos</option>
                         </select>
                     </div>
 

@@ -128,7 +128,8 @@ li #login-popup {
 }
 
 li #cadastro-popup {
-    right: 700px;
+  z-index: 1;
+    right: 300px;
     width: 210px;
     height: 290px;
 }
@@ -172,7 +173,7 @@ input {
     margin: 10px 0 0 0;
   }
 
-#login #submit {
+#login #submit, #cadastro #submit{
     background-color: #487c64;
     border-radius: 20px;
     height: 30px;
