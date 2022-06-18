@@ -1,0 +1,163 @@
+.header > div{
+    width: calc(100% / 4);
+}
+
+.header{
+    text-align: center;
+    padding-left: 100px;
+}
+
+.titulo_busca_personalizada{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #003734;
+    padding: 20px;
+}
+
+.texto_sobre{
+    text-align: right;
+    font-size: 24px;
+    font-family: Amiko;
+    margin: auto 40px;
+}
+
+.titulo_fundadores{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #003734;
+}
+
+.cards_perguntas{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.pergunta{
+    margin: 50px 60px;
+    font-family: Amiko;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    background-color: #003734;
+    border-radius: 20px;
+    padding: 50px; 
+}
+
+.pergunta img{
+    width: 240px;
+    border-radius: 100%;
+}
+
+.pergunt p{
+    color: #0A7D38;
+    padding-bottom: 30px; 
+}
+
+.pergunta h1{
+    color: azure;
+    padding-bottom: 30px;
+    font-weight: 800;
+}
+
+.pergunta label{
+    color: azure;
+    font-size: 300%;
+}
+
+.pergunta strong{
+    color: #0A7D38;
+}
+
+.resposta{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #0A7D38;
+    border-radius: 20px;
+}
+
+.resposta > div{
+    margin: 50px 60px;
+    font-family: Amiko;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 50px 20px 50px;
+    display: inline-block;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: calc(100% / 6);  
+    vertical-align: top; 
+}
+  
+.resposta input {
+    margin: 10px;
+    display: none;
+}
+  
+.resposta label {
+    padding: 2%;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 10px;
+    font-size: 180%;
+}
+  
+.resposta label:before {
+    content: '';
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: #59CA59;
+    border-radius: 50%;
+    z-index: 2;
+    transition: box-shadow .4s ease,
+            background .3s ease;
+}
+  
+.resposta input:checked + label:before {
+    box-shadow: inset 0px 3px 0 2px rgba(89,202,89,1);
+    background: #fff;
+}
+
+
+.botao_pesquisa{
+    text-align: center;
+    position: relative;
+    align-self: center;
+    
+}
+
+#btn{
+    color: azure;
+    font-size: 500%;
+    background-color: #003734;
+}
+
+
+.ondinha{
+    background-image: url('../../public/images/detalhe3.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: inherit;
+    width: 100%;
+    height: 271px;
+    top: 1280px;
+    z-index: -1;
+    transform: scaleX(-1);
+}
+
+.folha{
+    position: absolute;
+    float: right;
+    width: 150px;
+    transform: scaleX(-1);
+    margin-right: 20px;
+    margin-top: -20px;
+    /* filter: blur(1px); */
+}

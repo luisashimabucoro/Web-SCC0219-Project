@@ -1,0 +1,179 @@
+body {
+    font-size: 14px;
+    background: rgba(172,212,171,1);
+    margin: 0;  
+}
+
+.foto1{
+    height: 900px;
+    background: url("../../public/images/fundo.png");
+    height: 1100px;
+    width: 100%;
+    margin-top: 0px;
+    overflow: auto;
+    background-size: cover;
+    text-align: center;
+}
+
+.quiz{
+    background-color: rgb(33, 63, 54, 0.7);
+    backdrop-filter: blur(20px);
+    width: 561px;
+    height: 469px;
+    margin: 116px 0 0 116px;
+}
+
+.buttonQuiz{
+    color: #213F36;
+    background-color: #ADD4AC;
+    font-family: 'Amiko';
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 24px;
+    width: 35%;
+
+    position: absolute;
+    bottom: 0;
+    left: 22%;
+    padding: 20px;
+    margin: 0px 40px 70px 40px;
+}
+
+
+.quiz h1{
+    font-family: Amiko;
+    font-size: 40px;
+    padding: 50px 10px;
+    color: #D2FFCB;
+    text-align: center;
+    width: 480px;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+}
+
+.quiz img{
+    position: absolute;
+    left: 38%;
+    width: 133px;
+    height: 103px;
+}
+
+/* .ondinha{
+    background-image: url('../../public/images/detalhe2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    position: absolute;
+    width: 100%;
+    height: 471px;
+    top: 1000px;
+    z-index: 0;
+    transform: scaleX(-1)
+} */
+
+.tipos_produtos{
+    z-index: 2;
+    height: 720px;
+    margin-top: -2px;
+    text-align: center;
+    background-color: #003430;
+}
+.tipos_produtos h1{
+    margin-top: 0;
+    padding: 15px;
+    color: white;
+    font-family: Amiko;
+    font-size: 50px;
+}
+
+.lista_produtos{
+    justify-content: center;    
+}
+
+.slide{
+    width: 280px;
+    height: 225px;
+    background-image: url("../../public/images/slide_produto.png");
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+}
+
+#plantasCasa{
+    background-image: url("../../public/images/plantas\ internas.jpg");
+    background-size: cover;
+}
+
+#suculentas{
+    background-image:url("../../public/images/suculentas.jpeg");
+    background-size: cover;
+}
+
+#arbustos{
+    background-image:url("../../public/images/arbustos.jpg");
+    background-size: cover;
+}
+
+#hortinha{
+    background-image:url("../../public/images/hortinha.jpg");
+    background-size: cover;
+}
+
+#vasos{
+    background-image:url("../../public/images/vasos.jpg");
+    background-size: cover;
+}
+
+#equipamentos{
+    background-image:url("../../public/images/equipamentos.jpg");
+    background-size: cover;
+}
+
+#fertilizantes{
+    background-image:url("../../public/images/fertilizantes.jpg");
+    background-size: cover;
+}
+
+
+.slide a{
+    display: block;
+}
+
+.linkproduto{
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+    display:flex;
+    list-style-type: none;
+}
+
+li{
+    margin: 0 30px 20px;
+
+}
+
+.lista2{
+    justify-content: center;
+}
+
+.slide h2{
+    text-align: left;
+    color: white;
+    font-family: Amiko;
+    font-size: 20px;
+    margin: 10px;
+    border: 20px;
+    padding: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display:table-cell;
+    border-radius: 20px;
+    background-color: rgba(59, 70, 67, 0.7);
+    backdrop-filter: blur(5%);
+}
