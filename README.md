@@ -58,6 +58,7 @@ Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/downl
 Depois de instalados, serão necessários os arquivos localizados no diretório Milestone2. Com o diretório aberto e com o comando no terminal 
 
 ```
+npm install
 npm start 
 ```
 
