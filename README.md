@@ -36,7 +36,7 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
   - *admin*: id, nome, telefone e email
   - *cliente*: id, nome, endereço, telefone e email
   - *produto geral*: id, nome, foto, descrição, preço, quantidade em estoque e quantidade vendida
-    - *planta*: além dos atributos padrões, elas possuem tamanho, nível de iluminação, temperatura e manutenção ideais
+    - *planta*: além dos atributos padrões, elas possuem tamanho, nível de iluminação, temperatura, manutenção ideais e categoria
 
 ### Diagrama de Navegação
 <img src="Mockups/nav_diagram.png" alt="navigation diagram" width="700"/>
@@ -44,8 +44,25 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
 <a href="https://www.figma.com/file/3dgTdFB6VzP9HX0n41i1g5/Plant-Shop-Website-(Practice-%23001)-(Community)-(Copy)?node-id=0%3A1">Projeto no Figma</a>
 ## Comentários Sobre o Código
 ## Plano de Testagem
+
+Serão executados testes manuais para login e cadastro, inserções e gerenciamento de produtos, usuários e administradores, filtragem, busca e também simulação de compras em vários cenários.
+
+Não serão utilizados frameworks adicionais para os testes.
+
+Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin no formato (email:senha).
 ## Resultado dos Testes
 ## Procedimentos de Construção
+
+Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/download/) e seu gerenciador de pacotes [npm](https://nodejs.org/en/download/) instalados.
+
+Depois de instalados, serão necessários os arquivos localizados no diretório Milestone2. Com o diretório aberto e com o comando no terminal 
+
+```
+npm start 
+```
+
+inicie o React, e aguarde a construção e abertura do servidor no navegador.
+
 ## Problemas
 ## Comentários
 
