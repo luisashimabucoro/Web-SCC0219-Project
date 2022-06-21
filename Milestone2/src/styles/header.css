@@ -53,19 +53,26 @@
 }
 
 .carrinho{
+    background: transparent !important;
     border-radius: 10px;
     font-size: 26px;
     padding: 10px;
-    margin: 32px 0rem;
+    margin: 35px 0rem;
     float: right;
     background-color:rgb(195, 193, 193);
 }
 
+.pedidos{
+  margin-top: 40px;
+}
+
 .logout{
+  position: absolute;
+  right: 6%;
   border-radius: 10px;
   font-size: 26px;
   padding: 10px;
-  margin: 32px 0rem 32px 1rem;
+  margin: 32px -2rem 32px 1rem;
   float: right;
   color: white !important;
   background-color: rgb(162, 101, 101);
@@ -128,7 +135,8 @@ li #login-popup {
 }
 
 li #cadastro-popup {
-    right: 700px;
+  z-index: 1;
+    right: 300px;
     width: 210px;
     height: 290px;
 }
@@ -172,7 +180,7 @@ input {
     margin: 10px 0 0 0;
   }
 
-#login #submit {
+#login #submit, #cadastro #submit{
     background-color: #487c64;
     border-radius: 20px;
     height: 30px;
@@ -227,6 +235,12 @@ input {
   border-bottom: 1px solid black;
 }
 
+#cesta_carrinho{
+  background: transparent !important;
+  width: 40px;
+  position: absolute;
+  right: 12%;
+}
 /* -------------------- LOJA POPUP -------------------- */
 
 

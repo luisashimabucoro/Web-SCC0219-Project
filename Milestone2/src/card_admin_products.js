@@ -12,9 +12,10 @@ function card_admin_products(props){
     if(produto_atual != null){
         return (
             <div className="product-element">
-                <p>{produto_atual.name}</p>
-                <p>Estoque: {produto_atual.estoque}</p>
-                <p>Preço: R${produto_atual.price}</p>
+                <p className="produto-nome">{produto_atual.name}</p>
+                <p className="produto-estoque">Estoque: {produto_atual.estoque}</p>
+                <p className="produto-preco">Preço: R${produto_atual.price}</p>
+                <p className="produto-quantidadevendida">Qnt vendida:{produto_atual.quantidadeVendida}</p>
                 <a href={`editar_produto?${produto_atual.id}`}>
                     <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/>
                 </a>

@@ -1,12 +1,21 @@
 // import Header from './header';
-import Loja from './loja';
-import Home from './home';
 import Header from './header';
+import Home from './home';
+import Loja from './loja';
+import BuscaPersonalizada from './busca_personalizada'
 import Sobre from './sobre';
 import Produto from './pagina_produto';
 import Carrinho from './carrinho';
-import EditProducts from './admin_products';
+import AdminProdutos from './admin_products';
+import AdminClientes from './admin_clientes';
 import EditarProduto from './editar_produto';
+import EditarClientes from './popup_admin_cliente';
+import CompraFinalizada from './compra_concluida';
+import CriarProduto from './criar_produto';
+import FinalizarCompra from './finalizarCompra';
+import ListaCompras from './lista_compras';
+import MeusPedidos from './meus_pedidos';
+
 import {
   BrowserRouter,
   Routes,
@@ -38,12 +47,26 @@ function App() {
           <Route path="/loja_outros_adubos&amp;fertilizantes" element={<Loja tipo_produto={'adubo'} />}/>
 
           <Route path="/loja_busca/" element={<Loja tipo_produto={'busca'} />}/>
+          <Route path="/loja_busca_personalizada" element={<Loja tipo_produto={'busca_personalizada'} />}/>
 
           <Route path="/sobre" element={<Sobre />}/>
+          <Route path="/busca_personalizada" element={<BuscaPersonalizada />}/>
           <Route path="/produto" element={<Produto />}/>
           <Route path="/carrinho" element={<Carrinho />}/>
-          <Route path="/admin_products" element={<EditProducts />}/>
+          <Route path="/admin_products" element={<AdminProdutos />}/>
+          <Route path="/admin_clientes" element={<AdminClientes />}/>
+          <Route path="/editar_cliente" element={<EditarClientes />}/>
+
+          <Route path="/compra_concluida" element={<CompraFinalizada />}/>
+          <Route path="/finalizar_compra" element={<FinalizarCompra />}/>
+
+
           <Route path="/editar_produto" element={<EditarProduto />}/>
+          <Route path="/criar_produto" element={<CriarProduto />}/>
+
+          <Route path="/lista_compras" element={<ListaCompras />}/>
+          <Route path="/meus_pedidos" element={<MeusPedidos />}/>
+
 
         </Routes>
     </BrowserRouter>

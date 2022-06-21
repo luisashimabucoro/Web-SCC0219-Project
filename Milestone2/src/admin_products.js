@@ -1,6 +1,8 @@
 import './styles/admin_products.css';
 import CardAdminProduct from './card_admin_products';
 import {useState} from 'react';
+import Footer from './footer';
+
 function edit_products(){
 
     const [pageAdminProducts, setpageAdminProducts] = useState(0);
@@ -30,10 +32,12 @@ function edit_products(){
     indexProduto = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => value + (pageAdminProducts*10 ));
 
     return (
+        <div>
+
         <div className="edit-panel">
             <div className="panel-header">
                 <h1> Produtos </h1>
-                <a href="#">
+                <a href="criar_produto">
                     <img src={require('./button_images/add_product_button.png')} alt="Botão para adicionar novo produto"/>
                 </a>
             </div>
@@ -55,6 +59,10 @@ function edit_products(){
                 <button type="button" onClick={handle_next_page} className="pagebutton">&gt;</button>
                 <button type="button" onClick={handle_last_page} className="pagebutton">-&gt;&gt;</button>
             </div>
+
+        </div>
+            <Footer />
+
 
         </div>
     )

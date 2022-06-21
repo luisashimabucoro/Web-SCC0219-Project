@@ -6,18 +6,25 @@
 :root{
     --letra_clara: #D2FFCB;
 }
-.background_carrinho{
+/* .background_carrinho{
     height: 1164px;
 
+} */
+hr{
+    margin: 0 auto;
 }
-
-
+.carrinho_parent{
+    position: relative;
+    height: 95vh;
+}
 .janela_carrinho{
     width: 1052px;
     height: 860px;
-    background-color: var(--verde_escuro);
+    /* background-color: var(--verde_escuro); */
+    background-color: #013c37c6;
     margin: 67px auto;
     padding: 40px 90px;
+    border-radius: 50px;
 }
 
 .titulo_carrinho{
@@ -30,6 +37,8 @@
     margin-top: 28px;
     background-color: var(--verde_claro);
     height: 520px;
+    overflow: hidden;
+    overflow-y: scroll;
     
 }
 
@@ -93,13 +102,14 @@
 }
 
 .carrinho_precoFinal{
+    margin-top: 1%;
     color: var(--verde_claro);
     font-size: 40px;
     float: right;
     height: 40px;
 }
 
-.botao_finalizar_compra{
+.botao_carrinho_finalizar_compra{
     float: right;
     font-size: 40px;
     background-color: var(--verde_claro);

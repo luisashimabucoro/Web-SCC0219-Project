@@ -1,0 +1,25 @@
+{
+    "produtos":[
+        {
+            "id": 1,
+            "nome": "Celular",
+            "imagem": "https://www.samsung.com/br/images/phones/galaxy-s9/galaxy-s9-plus-black-front-angle-1.jpg",
+            "preco": "R$ 1000,00",
+            "descricao": "Celular da marca Samsung"
+        },
+        {
+            "id": 2,
+            "nome": "Celular2",
+            "imagem": "https://www.samsung.com/br/images/phones/galaxy-s9/galaxy-s9-plus-black-front-angle-1.jpg",
+            "preco": "R$ 1000,00",
+            "descricao": "Celular da marca Samsung"
+        },
+        {
+            "id": 3,
+            "nome": "Celular3",
+            "imagem": "https://www.samsung.com/br/images/phones/galaxy-s9/galaxy-s9-plus-black-front-angle-1.jpg",
+            "preco": "R$ 1000,00",
+            "descricao": "Celular da marca Samsung"
+        }
+    ]
+}

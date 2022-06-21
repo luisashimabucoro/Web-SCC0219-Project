@@ -1,13 +1,16 @@
 
+.content{
+    position: relative;
+    padding-bottom: 100px;
+}
 .rodape {
-    /* margin-top: -30px; */
     position:absolute;
     left:0;
     bottom:-240px;
     right:0;
     height:240px;
     padding: 20px;
-    background:rgb(219, 224, 220);
+    background:white;
     display: flex;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:rgb(20, 102, 20);

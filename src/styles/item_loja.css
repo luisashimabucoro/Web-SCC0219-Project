@@ -1,0 +1,10 @@
+#botao-carrinho{
+    background-color: var(--verde_escuro);
+    margin-top: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+}
