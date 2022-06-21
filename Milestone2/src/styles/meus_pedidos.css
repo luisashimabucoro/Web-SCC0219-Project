@@ -1,6 +1,6 @@
 /* Painel de edição */
 
-.edit-panel {
+.painel-meus-pedidos {
     position: relative;
     text-align: center;
     margin: 35px 15%;
@@ -14,8 +14,6 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     z-index: 0;
     height: 800px;
-    overflow: hidden;
-    overflow-y: scroll;
 }
 
 .panel-header {
@@ -31,19 +29,19 @@
     background:none;
 }
 
-.edit-panel h1 {
+.painel-meus-pedidos h1 {
     color: #D2FFCB;
     font-weight: 400;
     font-size: 50px;
     padding-top: 10px;
     display: inline-flexbox;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
-.product-element {
-    width: 80%;
-    height: 46px;
-    margin: 10px 10%;
+.lista-compra-element {
+    width: 90%;
+    height: 50px;
+    margin: 10px 5%;
     padding: 5px;
     border-radius: 15px;
     background-color: #D2FFCB;
@@ -51,43 +49,39 @@
     /* justify-content: space-between; */
 }
 
-.product-element p {
-    /* display: inline-block; */
+.lista-compra-element p {
     font-weight: 400;
     font-size: 20px;
     margin: 5px 10%;
 }
 
-.produto-nome{
+.lista-compra-data{
     position: absolute;
-    left: 5%;
+    left: -2%;
 }
 
-.produto-estoque{
+
+.lista-compra-produto{
     position: absolute;
-    left: 25%;
+    left: 12%;
 }
 
-.produto-preco{
+.lista-compra-quantidade{
     position: absolute;
-    left: 42%;
+    left: 26%;
 }
-
-.produto-quantidadevendida{
+.lista-compra-preco{
     position: absolute;
-    left: 57%;
+    left: 40%;
 }
-
-.product-element img {
-    width: 25px;
-    height: 25px;
-    margin: 0px 5px;
-    padding-top: 5px;
+.lista-compra-endereco{
     position: absolute;
-    right: 12%;
-    float: right;
+    left: 52%;
 }
-
+.lista-compra-digitos{
+    position: absolute;
+    left: 75%;
+}
 
 .pageButtons{
     margin-top: 40px;

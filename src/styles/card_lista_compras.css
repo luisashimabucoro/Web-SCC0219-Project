@@ -14,8 +14,6 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     z-index: 0;
     height: 800px;
-    overflow: hidden;
-    overflow-y: scroll;
 }
 
 .panel-header {
@@ -40,7 +38,7 @@
     margin: 20px 0;
 }
 
-.product-element {
+.compra-element {
     width: 80%;
     height: 46px;
     margin: 10px 10%;
@@ -51,42 +49,32 @@
     /* justify-content: space-between; */
 }
 
-.product-element p {
+.compra-element p {
     /* display: inline-block; */
     font-weight: 400;
     font-size: 20px;
     margin: 5px 10%;
 }
 
-.produto-nome{
+.compra-nome{
     position: absolute;
     left: 5%;
 }
 
-.produto-estoque{
+.compra-produto{
     position: absolute;
-    left: 25%;
+    left: 32%;
 }
 
-.produto-preco{
-    position: absolute;
-    left: 42%;
-}
-
-.produto-quantidadevendida{
+.compra-quantidade{
     position: absolute;
     left: 57%;
 }
-
-.product-element img {
-    width: 25px;
-    height: 25px;
-    margin: 0px 5px;
-    padding-top: 5px;
+.compra-preco{
     position: absolute;
-    right: 12%;
-    float: right;
+    left: 68%;
 }
+
 
 
 .pageButtons{

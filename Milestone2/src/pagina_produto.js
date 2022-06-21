@@ -26,6 +26,7 @@ function pagina_produto() {
     console.log(id_produto);    
     const [quantidade, setQuantidade] = useState(1);
     const estoque = produto.estoque;
+
     const diminuirQuantidade = () => {
         if(quantidade > 0) setQuantidade(quantidade-1);
         else setQuantidade(0);
@@ -36,6 +37,7 @@ function pagina_produto() {
         else setQuantidade(quantidade);
     }
     const submeter = () => {
+        
         const produtoAtual = JSON.parse(localStorage.getItem('produto1'));
         produtoAtual.price = document.getElementById('editaPreco').value;
         console.log(produtoAtual)
@@ -47,13 +49,15 @@ function pagina_produto() {
     }
 
     const adicionarProduto = () => {
-        // const produtoAtual = JSON.parse(localStorage.getItem('produto1'));
-        // produtoAtual.quantidade = quantidade;
-        console.log(produto.price*quantidade);
-        localStorage.setItem('quantidade_no_carrinho', parseInt(localStorage.getItem('quantidade_no_carrinho')) + 1);
-        localStorage.setItem('preco_total', parseInt(localStorage.getItem('preco_total')) + produto.price * quantidade);
-        localStorage.setItem(`carrinho_produto${localStorage.getItem('quantidade_no_carrinho')}`, JSON.stringify(produto)); 
-        localStorage.setItem(`quantidade_produto${localStorage.getItem('quantidade_no_carrinho')}`, quantidade); 
+        if(quantidade <= estoque){
+            console.log(produto.price*quantidade);
+            localStorage.setItem('quantidade_no_carrinho', parseInt(localStorage.getItem('quantidade_no_carrinho')) + 1);
+            localStorage.setItem('preco_total', parseInt(localStorage.getItem('preco_total')) + produto.price * quantidade);
+            localStorage.setItem(`carrinho_produto${localStorage.getItem('quantidade_no_carrinho')}`, JSON.stringify(produto)); 
+            localStorage.setItem(`quantidade_produto${localStorage.getItem('quantidade_no_carrinho')}`, quantidade); 
+        }else{
+            alert('Quantidade indisponível no estoque');
+        }
     }
     
     return (
@@ -76,7 +80,7 @@ function pagina_produto() {
             </div>
             <div className="descricao_produto">
                 <h1>Descrição:</h1>
-                <p>O Musgo de Clube não é exatamente um musgo nem uma samambaia, mas tem parentesco com o último. Essa planta incomum e exótica se faz uma planta de interior exelente em ambientes de luz indireta. Elas amam água então é recomendado mantê-las com a terra sempre úmida. O Musgo do Clube é muito fácil de cuidar! Elas são ótimas para terrários e pequenos jardins. Essa planta é classificada como uma Lycopodiophyta, uma descendente de plantas produtoras de esporos que datam de aproximadamente</p>
+                <p >{produto.descricao}</p>
             </div>
         </div>
     )
