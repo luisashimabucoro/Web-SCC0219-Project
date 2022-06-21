@@ -45,7 +45,7 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
 ## Comentários Sobre o Código
 ## Plano de Testagem
 
-Serão executados testes manuais para inserções e gerenciamento de produtos, usuários e administradores, e também simulação de compras em vários cenários.
+Serão executados testes manuais para login e cadastro, inserções e gerenciamento de produtos, usuários e administradores, filtragem, busca e também simulação de compras em vários cenários.
 
 Não serão utilizados frameworks adicionais para os testes.
 
