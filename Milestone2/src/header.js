@@ -183,6 +183,12 @@ function header(){
     const toggleLogin = () => {
         isLoggedIn.current = false;
 
+        localStorage.setItem('preco_total', 0);
+        localStorage.setItem('quantidade_no_carrinho', 0);
+        for(let i = 0; i < 20; i++){
+            localStorage.removeItem(`carrinho_produto${i}`);  
+        }
+        
         localStorage.setItem('isLogged', false);
         navigate('home');
     }
