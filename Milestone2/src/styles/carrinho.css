@@ -121,3 +121,7 @@ hr{
     height: 80px;
     
 }
+
+#botao_proxima_pagina{
+    cursor: pointer;
+}

@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {useRef} from 'react';
 import $ from 'jquery';
 import './styles/card_lista_compras.css';
+import React from 'react';
 
 var compra_atual = [];
 

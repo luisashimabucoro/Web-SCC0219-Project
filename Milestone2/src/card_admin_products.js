@@ -1,3 +1,5 @@
+import React from 'react';
+
 function card_admin_products(props){
 
     const indice = props.indice;

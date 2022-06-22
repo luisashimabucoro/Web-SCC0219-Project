@@ -97,7 +97,7 @@
   margin-top: 12px;
   height: 150px;
   width: 150px;
-  background-image: url('../../public/images/logo_fundo_branco.png');
+  background-image: url('../button_images/logo_fundo_branco.png');
   background-size: contain;
   background-repeat: no-repeat;
 }

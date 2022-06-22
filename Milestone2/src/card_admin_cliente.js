@@ -2,6 +2,7 @@ import './styles/card_admin_cliente.css';
 import {useState} from 'react';
 import {useRef} from 'react';
 import $ from 'jquery';
+import React from 'react';
 
 
 function card_admin_cliente(props){

@@ -1,6 +1,7 @@
 import './styles/popup_editar_cliente.css';
 import {atualiza_contas} from './header';
 import {useNavigate} from 'react-router-dom';
+import React from 'react';
 
 function popup_admin_cliente(){
 

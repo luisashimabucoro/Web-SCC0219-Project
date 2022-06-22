@@ -1,5 +1,6 @@
 import CardAdminCliente from './card_admin_cliente';
 import Footer from './footer';
+import React from 'react';
 
 function admin_clientes(){
     return(

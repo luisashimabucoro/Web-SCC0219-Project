@@ -6,9 +6,10 @@ function card_produto(index){
     
     // console.log()
     const [qnt, setQnt] = useState(
-        localStorage.getItem(`quantidade_produto${index.index}`)
+        localStorage.getItem(`quantidade_produto${localStorage.getItem('quantidade_no_carrinho')}`)
     );
 
+    console.log("qnt:", qnt);
     let [produtoCarrinho, setProduto] = useState(
         JSON.parse(localStorage.getItem(`carrinho_produto${index.index}`))
         )
