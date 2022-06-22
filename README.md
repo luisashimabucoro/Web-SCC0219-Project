@@ -50,6 +50,14 @@ Serão executados testes manuais para login e cadastro, inserções e gerenciame
 Não serão utilizados frameworks adicionais para os testes.
 
 Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin no formato (email:senha).
+
+### Seguindo um roteiro de testagem
+
+1. Teste com login
+2. Teste com cadastro
+3. Teste com funcionalidade
+4. Teste com busca
+
 ## Resultado dos Testes
 ## Procedimentos de Construção
 
