@@ -53,59 +53,58 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 
 ### Seguindo um roteiro de testagem
 
-- Teste com cadastro
+- **Teste com cadastro**
   - Cadastro feito com e-mail inválido.
   - Cadastro em que o campo de senha não confere com o campo de confirmação da senha.
   - Cadastro em que a senha possua pelo menos 8 caracteres.
-
-Teste com login
+- **Teste com login**
   - Login feito com campos vazios.
   - Login feito com campos inválidos (email sem “@”, senha com menos que 8 caracteres etc).
   - Login feito com campos corretamente preenchidos.
   - Logout
 
-Teste com busca
-Busca de itens sem nenhum retorno.
-Busca de itens com retorno.
+- **Teste com busca**
+	- Busca de itens sem nenhum retorno.
+	- Busca de itens com retorno.
 
-Teste com funcionalidade específica de busca personalizada
-Realizar busca com menos que 4 campos preenchidos.
-Realizar busca preenchendo todos os campos de características.
+- **Teste com funcionalidade específica de busca personalizada**
+	- Realizar busca com menos que 4 campos preenchidos.
+	- Realizar busca preenchendo todos os campos de características.
 
-Teste de navegação
-Navegação com usuário comum.
-Navegação com usuário admin.
+- **Teste de navegação**
+	- Navegação com usuário comum.
+	- Navegação com usuário admin.
  
-Teste com escolha de produto
-Visualização.
+- **Teste com escolha de produto**
+	- Visualização.
 
-Teste carrinho e check out
-Compra com carrinho vazio.
-Editar quantidade de um determinado produto.
-Remover um produto.
-Checando a integridade dos produtos, conferindo se o produto está somente no carrinho da conta em que foi adicionado.
+- **Teste carrinho e check out**
+	- Compra com carrinho vazio.
+	- Editar quantidade de um determinado produto.
+	- Remover um produto.
+	- Checando a integridade dos produtos, conferindo se o produto está somente no carrinho da conta em que foi adicionado.
 
-Teste editar produto
-Alterar informações do produto que precisam ser mudadas e buscar pelo produto na barra de navegação.
+- **Teste editar produto**
+	- Alterar informações do produto que precisam ser mudadas e buscar pelo produto na barra de navegação.
 
-Teste inserir produto
-Inserir produto com campos vazios.
-Inserir produto com campos inválidos.
+- **Teste inserir produto**
+	- Inserir produto com campos vazios.
+	- Inserir produto com campos inválidos.
 
-Teste remover produto
-Removendo um produto.
+- **Teste remover produto**
+	- Removendo um produto.
 
-Teste remover cliente
-Removendo um cliente.
+- **Teste remover cliente**
+	- Removendo um cliente.
 
-Teste visualizar pedidos (admin)
-Visualizando quais pedidos foram feitos.
+- **Teste visualizar pedidos (admin)**
+	- Visualizando quais pedidos foram feitos.
 		
-Teste visualizar compras (cliente)
-Cliente visualizando as compras feitas
+- **Teste visualizar compras (cliente)**
+	- Cliente visualizando as compras feitas
 
-Teste visualizar produtos (admin)
-Administrador visualizando os produtos
+- **Teste visualizar produtos (admin)**
+	- Administrador visualizando os produtos
 
 
 ## Resultado dos Testes
