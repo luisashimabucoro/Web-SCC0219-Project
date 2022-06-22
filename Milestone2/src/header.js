@@ -114,39 +114,48 @@ function header(){
 
 
     const handle_cadastro = () => {
-        if ($('#cadastro_senha').val() === $('#confirma_senha').val()){
+        if(document.getElementById('cadastro_email').checkValidity()) {
 
-            if (lista_contas.some(conta => conta.email === $('#cadastro_email').val())){
-                alert('Email já cadastrado');
-                return;
+            if ($('#cadastro_senha').val() === $('#confirma_senha').val()){
+
+                if ($('#cadastro_senha').val().length < 8){
+                    alert("A senha deve ter no mínimo 8 caracteres!")
+                    return;
+                }
+                if (lista_contas.some(conta => conta.email === $('#cadastro_email').val())){
+                    alert('Email já cadastrado');
+                    return;
+                }
+                console.log("entrou");
+                let nova_conta = new Conta(
+                    $('#cadastro_nome').val(),
+                    $('#cadastro_senha').val(),
+                    $('#cadastro_email').val(),
+                    $('#cadastro_telefone').val()
+                );
+                
+                console.log("nova conta", nova_conta)
+                // lista_contas.push(nova_conta);
+                localStorage.setItem(`cliente${localStorage.getItem('qtdClientes')}`, JSON.stringify(nova_conta));
+                localStorage.setItem('qtdClientes', parseInt(localStorage.getItem('qtdClientes')) + 1);
+                localStorage.setItem('isLogged', true);
+                localStorage.setItem('isAdmin', false);
+                isLoggedIn.current = true;
+                isAdmin.current = false;
+                atualiza_contas();
+                console.log(lista_contas)
+                localStorage.setItem('clienteAtivo', `cliente?${localStorage.getItem('qtdClientes') - 1}`);
+                console.log("ativou cliente");
+                localStorage.setItem(`numero_compras_cliente${localStorage.getItem('qtdClientes')-1}`,0);
+                console.log("numero compras cliente novo:", localStorage.getItem(`numero_compras_clientes${localStorage.getItem('qtdClientes')-1}`));
+                localStorage.setItem('id_cliente_ativo', localStorage.getItem('qtdClientes'));
+                
+                // navigate('home');
+            }else{
+                alert('Senhas não conferem');
             }
-            console.log("entrou");
-            let nova_conta = new Conta(
-                $('#cadastro_nome').val(),
-                $('#cadastro_senha').val(),
-                $('#cadastro_email').val(),
-                $('#cadastro_telefone').val()
-            );
-            
-            console.log("nova conta", nova_conta)
-            // lista_contas.push(nova_conta);
-            localStorage.setItem(`cliente${localStorage.getItem('qtdClientes')}`, JSON.stringify(nova_conta));
-            localStorage.setItem('qtdClientes', parseInt(localStorage.getItem('qtdClientes')) + 1);
-            localStorage.setItem('isLogged', true);
-            localStorage.setItem('isAdmin', false);
-            isLoggedIn.current = true;
-            isAdmin.current = false;
-            atualiza_contas();
-            console.log(lista_contas)
-            localStorage.setItem('clienteAtivo', `cliente?${localStorage.getItem('qtdClientes') - 1}`);
-            console.log("ativou cliente");
-            localStorage.setItem(`numero_compras_cliente${localStorage.getItem('qtdClientes')-1}`,0);
-            console.log("numero compras cliente novo:", localStorage.getItem(`numero_compras_clientes${localStorage.getItem('qtdClientes')-1}`));
-            localStorage.setItem('id_cliente_ativo', localStorage.getItem('qtdClientes'));
-            
-            // navigate('home');
         }else{
-            alert('Senhas não conferem');
+            alert("Email inválido!")
         }
     }
 
@@ -188,7 +197,6 @@ function header(){
         for(let i = 0; i < 20; i++){
             localStorage.removeItem(`carrinho_produto${i}`);  
         }
-        
         localStorage.setItem('isLogged', false);
         navigate('home');
     }
@@ -252,7 +260,7 @@ function header(){
 
                     <li id="cadastro">
                         <div className="login-content" id="cadastro-popup">
-                            <form>
+                            <form id="form_cadastro">
                             <fieldset id="inputs">
                             <input  id="cadastro_nome"
                             type="text"
