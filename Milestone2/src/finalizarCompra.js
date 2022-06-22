@@ -105,7 +105,6 @@ function finalizar_compra(){
                         let id_atualiza_estoque = atualiza_estoque.id;
                         localStorage.setItem(`produto${id_atualiza_estoque}`, JSON.stringify(atualiza_estoque));
                         console.log("PRODUTO ATUALIZADO:", atualiza_estoque);
-                        setPreco(0);
                         
                     }
                 }catch(e){
