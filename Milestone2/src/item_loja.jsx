@@ -114,7 +114,7 @@ function returnProduto(id_produto, ordenacao){
 
 function atualiza_vetor_produtos(ordenacao){
   console.log("atualizando de maneira:", ordenacao);
-  for(var i = 0; i < localStorage.getItem('quantidadeProdutosTotal'); i++){
+  for(var i = 0; i < 42; i++){
     try{
       products[i] = JSON.parse(localStorage.getItem(`produto${i}`));
     }catch(e){
@@ -132,11 +132,12 @@ function atualiza_vetor_produtos(ordenacao){
 
 function buscaCategoria(tipo, indice, ordenacao){
   atualiza_vetor_produtos(ordenacao);
-  if(products.filter(produto => produto.tipo == tipo)[indice] != undefined){
-    return products.filter(produto => produto.tipo == tipo)[indice]
-  }else{
-    return null;
-  }
+    if(products.filter(produto => produto.tipo == tipo)[indice] != undefined){
+      return products.filter(produto => produto.tipo == tipo)[indice]
+    }else{
+      return null;
+    }
+
 }
 
 function buscaSubCategoria(subtipo, indice, ordenacao){
@@ -220,11 +221,15 @@ function produtos(props){
     if(produto_atual.estoque > 0 ){
       localStorage.setItem('quantidade_no_carrinho', parseInt(localStorage.getItem('quantidade_no_carrinho')) + 1);
       localStorage.setItem('preco_total', parseInt(localStorage.getItem('preco_total')) + produto_atual.price);
-      localStorage.setItem(`carrinho_produto${localStorage.getItem('quantidade_no_carrinho')}`, JSON.stringify(produto_atual)); 
+      localStorage.setItem(`carrinho_produto${localStorage.getItem('quantidade_no_carrinho')}`, JSON.stringify(produto_atual));
+
       localStorage.setItem(`quantidade_produto${localStorage.getItem('quantidade_no_carrinho')}`, 1);
-      let atualiza_estoque =  localStorage.getItem(`produto${indice}`);
+      
+      let atualiza_estoque =  JSON.parse(localStorage.getItem(`produto${indice}`));
+      console.log(atualiza_estoque);
       atualiza_estoque.estoque = parseInt(atualiza_estoque.estoque) - 1;
-      localStorage.setItem(`produto${indice}`, JSON.stringify(atualiza_estoque));
+      localStorage.setItem(`produto${atualiza_estoque.id}`, JSON.stringify(atualiza_estoque));
+      produto_atual.estoque = parseInt(produto_atual.estoque) - 1;
     }else{
       alert("Produto sem estoque");
     }

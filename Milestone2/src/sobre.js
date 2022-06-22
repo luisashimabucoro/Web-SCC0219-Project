@@ -1,5 +1,6 @@
 import './styles/sobre.css'
 import Footer from './footer';
+import React from 'react';
 
 function sobre(){
     return (

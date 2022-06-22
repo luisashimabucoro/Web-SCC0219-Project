@@ -2,6 +2,7 @@ import './styles/busca_personalizada.css'
 import $ from 'jquery'
 import { useNavigate } from 'react-router-dom';
 import Footer from './footer';
+import React from 'react';
 
 function busca_personalizada(){
     const navigate = useNavigate();

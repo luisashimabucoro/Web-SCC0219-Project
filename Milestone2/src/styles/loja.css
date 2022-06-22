@@ -148,7 +148,7 @@ li{
 }
 
 .loja_ondinha{
-    background-image: url('../../public/images/detalhe.png');
+    background-image: url('../button_images/detalhe.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;

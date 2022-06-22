@@ -55,7 +55,7 @@
     margin-left: 20%;
     height: 200px;
     width: 350px;
-    background-image: url('../../public/images/logo_fundo_branco.png');
+    background-image: url('../button_images/logo_fundo_branco.png');
     background-size: contain;
     background-repeat: no-repeat;
 }

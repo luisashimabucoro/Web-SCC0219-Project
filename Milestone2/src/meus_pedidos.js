@@ -1,6 +1,8 @@
 import CardMeusPedidos from './card_meus_pedidos';
 import './styles/meus_pedidos.css';
 import Footer from './footer';
+import React from 'react';
+
 function meus_pedidos(){
     return(
         <div>

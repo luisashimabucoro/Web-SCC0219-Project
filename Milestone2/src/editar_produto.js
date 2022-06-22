@@ -1,13 +1,15 @@
 import './styles/editar_produto.css';
 import $ from 'jquery';
+import React from 'react';
 
 class Produto {
-    constructor(id, name, img, price, estoque, tipo, subtipo, descricao, tamanho, iluminacao, temperatura, manutencao){
+    constructor(id, name, img, price, estoque, quantidade_vendida, tipo, subtipo, descricao, tamanho, iluminacao, temperatura, manutencao){
         this.id = id;
         this.name = name;
         this.img = img;
         this.price = price;
         this.estoque = estoque;
+        this.quantidadeVendida = quantidade_vendida
         this.tipo = tipo;
         this.subtipo = subtipo;
         this.descricao = descricao;
@@ -52,12 +54,20 @@ function editar_produto(){
         console.log("tamanho", tamanho, "iluminacao:", iluminacao, "temperatura:", temperatura, "manutencao:", manutencao, "descricao:", descricao);
         let subtipo = document.getElementById('tipos').value;
         let tipo = define_tipo(subtipo);
+
+        if(!document.getElementById('produtoNome').value || !document.getElementById('produtoImg').value || 
+        !document.getElementById('produtoPreco').value || !document.getElementById('produtoEstoque').value || !document.getElementById('tipos').value
+        || !descricao){
+            alert("Preencha tudo!");
+            return;
+        }
         produto_atualizado = new Produto(
             `${id_produto}`,
             document.getElementById('produtoNome').value,
             document.getElementById('produtoImg').value,
             document.getElementById('produtoPreco').value,
             document.getElementById('produtoEstoque').value,
+            produto_a_ser_editado.quantidadeVendida,
             tipo,
             document.getElementById('tipos').value,
             descricao,
@@ -65,6 +75,15 @@ function editar_produto(){
         )
         console.log(produto_atualizado);
         localStorage.setItem(`produto${id_produto}`, JSON.stringify(produto_atualizado));
+    }
+    
+    console.log(document.getElementsByClassName('editar-aspectos-planta')[0]);
+
+    console.log(produto_a_ser_editado.tipo);
+    if(produto_a_ser_editado.tipo != "planta"){
+        $('#div_aspectos').hide();
+        console.log("nao eh planta")
+        
     }
 
     return (
@@ -79,7 +98,7 @@ function editar_produto(){
 
                     <div className="entrada_preco">
                     <p>Preço Unitário</p>
-                    <input defaultValue={produto_a_ser_editado.price}  autoComplete="new-password" id="produtoPreco"  className="info-inputs " type="text"/>
+                    <input defaultValue={produto_a_ser_editado.price}  autoComplete="new-password" id="produtoPreco"  className="info-inputs " type="number"/>
                     </div>
 
                     <div className="entrada_estoque">
@@ -98,7 +117,7 @@ function editar_produto(){
                     <div className="editar-radio-atributos entrada_tipo">
                         <div className="selecionar-tipo">
                             <p>Tipo</p>
-                            <select  selected={produto_a_ser_editado.subtipo} id="tipos">
+                            <select  defaultValue={produto_a_ser_editado.subtipo} id="tipos">
                                 <option value="interior">Plantas de Interior</option>
                                 <option value="horta">Horta</option>
                                 <option value="arvore">Árvores e Arbustos</option>
@@ -111,62 +130,65 @@ function editar_produto(){
                         </div>
                     </div>
 
-                    <div className="editar-aspectos-planta">
-                    <form className="form-editar-produto">
 
-                        <div className="editar_pergunta">
-                            <p>Tamanho</p>
-                            <div className="editar-radio-atributos">
-                                    {/* <div></div> */}
-                                    <input   type="radio" value="pequeno" id="tamanho-pequeno"  name="tamanho"></input>
-                                    <label htmlFor="tamanho-pequeno">Pequeno</label>
+                    {produto_a_ser_editado.tipo == "planta" ?
+                        <div id="div_aspectos" className="editar-aspectos-planta">
+                        <form className="form-editar-produto">
 
-                                    <input   type="radio" value="medio" id="tamanho-medio"  name="tamanho"></input>
-                                    <label htmlFor="tamanho-medio">Médio</label>
+                            <div className="editar_pergunta">
+                                <p>Tamanho</p>
+                                <div className="editar-radio-atributos">
+                                        {/* <div></div> */}
+                                        <input   type="radio" value="pequeno" id="tamanho-pequeno"  name="tamanho"></input>
+                                        <label htmlFor="tamanho-pequeno">Pequeno</label>
 
-                                    <input   type="radio" value="grande" id="tamanho-grande"  name="tamanho"></input>
-                                    <label htmlFor="tamanho-grande">Grande</label>
+                                        <input   type="radio" value="medio" id="tamanho-medio"  name="tamanho"></input>
+                                        <label htmlFor="tamanho-medio">Médio</label>
+
+                                        <input   type="radio" value="grande" id="tamanho-grande"  name="tamanho"></input>
+                                        <label htmlFor="tamanho-grande">Grande</label>
+                                </div>
                             </div>
+
+                            <p>Iluminação</p>
+                            <div className="editar-radio-atributos">
+                                <input   type="radio" id="iluminacao-baixa"  name="iluminacao" value="baixa"/>
+                                <label htmlFor="iluminacao-baixa">Sombra</label>
+
+                                <input   type="radio" id="iluminacao-media"  name="iluminacao" value="media"/>
+                                <label htmlFor="iluminacao-media">Meia-sombra</label>
+
+                                <input   type="radio" id="iluminacao-alta"  name="iluminacao" value="alta"/>
+                                <label htmlFor="iluminacao-alta">Sol</label>
+                            </div>
+
+                            <p>Temperatura</p>
+                            <div className="editar-radio-atributos">
+                                <input   type="radio" id="temperatura-baixa"  name="temperatura" value="baixa"/>
+                                <label htmlFor="temperatura-baixa">Baixa</label>
+
+                                <input   type="radio" id="temperatura-media"  name="temperatura" value="media"/>
+                                <label htmlFor="temperatura-media">Média</label>
+
+                                <input   type="radio" id="temperatura-alta"  name="temperatura" value="alta"/>
+                                <label htmlFor="temperatura-alta">Alta</label>
+                            </div>
+
+                            <p>Manutenção</p>
+                            <div className="editar-radio-atributos">
+                                <input   type="radio" id="manutencao-baixa"  name="manutencao" value="baixa"/>
+                                <label htmlFor="manutencao-baixa">Baixa</label>
+
+                                <input   type="radio" id="manutencao-media"  name="manutencao" value="media"/>
+                                <label htmlFor="manutencao-media">Média</label>
+
+                                <input   type="radio" id="manutencao-alta"  name="manutencao" value="alta"/>
+                                <label htmlFor="manutencao-alta">Alta</label>
+                            </div>
+                        </form>
+
                         </div>
-
-                        <p>Iluminação</p>
-                        <div className="editar-radio-atributos">
-                            <input   type="radio" id="iluminacao-baixa"  name="iluminacao" value="baixa"/>
-                            <label htmlFor="iluminacao-baixa">Sombra</label>
-
-                            <input   type="radio" id="iluminacao-media"  name="iluminacao" value="media"/>
-                            <label htmlFor="iluminacao-media">Meia-sombra</label>
-
-                            <input   type="radio" id="iluminacao-alta"  name="iluminacao" value="alta"/>
-                            <label htmlFor="iluminacao-alta">Sol</label>
-                        </div>
-
-                        <p>Temperatura</p>
-                        <div className="editar-radio-atributos">
-                            <input   type="radio" id="temperatura-baixa"  name="temperatura" value="baixa"/>
-                            <label htmlFor="temperatura-baixa">Baixa</label>
-
-                            <input   type="radio" id="temperatura-media"  name="temperatura" value="media"/>
-                            <label htmlFor="temperatura-media">Média</label>
-
-                            <input   type="radio" id="temperatura-alta"  name="temperatura" value="alta"/>
-                            <label htmlFor="temperatura-alta">Alta</label>
-                        </div>
-
-                        <p>Manutenção</p>
-                        <div className="editar-radio-atributos">
-                            <input   type="radio" id="manutencao-baixa"  name="manutencao" value="baixa"/>
-                            <label htmlFor="manutencao-baixa">Baixa</label>
-
-                            <input   type="radio" id="manutencao-media"  name="manutencao" value="media"/>
-                            <label htmlFor="manutencao-media">Média</label>
-
-                            <input   type="radio" id="manutencao-alta"  name="manutencao" value="alta"/>
-                            <label htmlFor="manutencao-alta">Alta</label>
-                        </div>
-                    </form>
-
-                    </div>
+                    : null}
                 </div>
 
             </div>

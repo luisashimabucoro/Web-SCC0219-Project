@@ -15,6 +15,8 @@ import CriarProduto from './criar_produto';
 import FinalizarCompra from './finalizarCompra';
 import ListaCompras from './lista_compras';
 import MeusPedidos from './meus_pedidos';
+import React from 'react';
+
 
 import {
   BrowserRouter,

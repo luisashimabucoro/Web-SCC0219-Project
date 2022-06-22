@@ -1,4 +1,5 @@
 import './styles/menu_categorias.css';
+import React from 'react';
 
 function menu_categorias(){
     return (

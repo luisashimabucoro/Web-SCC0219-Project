@@ -1,4 +1,5 @@
 import './styles/compra_concluida.css';
+import React from 'react';
 
 function compra_concluida(){
 

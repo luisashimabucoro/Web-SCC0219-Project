@@ -2,6 +2,7 @@ import './styles/admin_products.css';
 import CardAdminProduct from './card_admin_products';
 import {useState} from 'react';
 import Footer from './footer';
+import React from 'react';
 
 function edit_products(){
 

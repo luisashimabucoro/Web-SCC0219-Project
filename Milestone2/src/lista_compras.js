@@ -1,5 +1,6 @@
 import CardListaCompras from './card_lista_compras';
 import Footer from './footer';
+import React from 'react';
 
 function lista_compras(){
     return(
