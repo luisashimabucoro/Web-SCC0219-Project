@@ -238,7 +238,7 @@ function produtos(props){
   
   if(indice <= localStorage.getItem("quantidadeProdutosTotal") && produto_atual != null){
     return (
-      <li>
+      <li className="li_loja">
       <a href={`produto?${produto_atual.id}`}> 
         <article>
             <div className={`card card${coluna}`}>
