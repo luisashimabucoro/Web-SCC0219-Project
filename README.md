@@ -56,7 +56,7 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 - **Teste com cadastro**
   - Cadastro feito com e-mail inválido.
   - Cadastro em que o campo de senha não confere com o campo de confirmação da senha.
-  - Cadastro em que a senha possua pelo menos 8 caracteres.
+  - Cadastro em que a senha possua menos de 8 caracteres.
 - **Teste com login**
   - Login feito com campos vazios.
   - Login feito com campos inválidos (email sem “@”, senha com menos que 8 caracteres etc).
