@@ -56,28 +56,29 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 ### Seguindo um roteiro de testagem
 
 1. **Teste com cadastro**
-	* Cadastro feito com e-mail inválido.
- 	* Cadastro em que o campo de senha não confere com o campo de confirmação da senha.
- 	* Cadastro em que a senha possua menos de 8 caracteres.
- 	* Cadastro preenchido corretamente com dados válidos.
+	* Cadastro feito com e-mail inválido
+ 	* Cadastro em que o campo de senha não confere com o campo de confirmação da senha
+ 	* Cadastro em que a senha possua menos de 8 caracteres
+ 	* Cadastro preenchido corretamente com dados válidos
  	* Cadastro utilizando o mesmo email que o de um cadastro previamente realizado
 2. **Teste com login**
-    * Login feito com campos vazios.
-    * Login feito com campos inválidos (email sem “@”, senha com menos que 8 caracteres etc).
-    * Login feito com campos corretamente preenchidos.
+    * Login feito com campos vazios
+    * Login feito com campos inválidos (email sem “@”, senha com menos que 8 caracteres etc)
+    * Login feito com campos corretamente preenchidos
     * Logout
 
 3. **Teste com busca**
-	* Busca de itens sem nenhum retorno.
-	* Busca de itens com retorno.
+	* Busca no campo de busca do produto "computador"
+	* Busca no campo de busca do produto "planta de interior"
+	* Busca no campo de busca por "planta"
 
 4. **Teste com funcionalidade específica de busca personalizada**
-	* Realizar busca com menos que 4 campos preenchidos.
-	* Realizar busca preenchendo todos os campos de características.
+	* Realizar busca com menos que 4 campos preenchidos
+	* Realizar busca preenchendo, respectivamente, os campos "Médio", "Médio", "Média" e "Pouco"
 
 5. **Teste de navegação**
-	* Navegação com usuário comum.
-	* Navegação com usuário admin.
+	* Navegação pelas páginas do cliente (Home, Loja, Busca Personalizada, Sobre, Carrinho e Meus Pedidos)
+	* Navegação com admin (páginas do cliente + Clientes, Produtos, Compras, Editar Cliente, Editar Produto)
  
 6. **Teste com escolha de produto**
 	* Visualização.
@@ -115,13 +116,28 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 
 ### Resultados esperados de acordo com o roteiro de testagem
 
-1. Teste com cadastro
+1. **Teste com cadastro**
 	* Alert avisando que o email é inválido e aviso do campo de texto do forms de cadastro
 	* Alert avisando que as senhas não batem
 	* Alert avisando que a senha deve possuir pelo menos 8 caracteres
 	* Cadastro e login realizado com sucesso, dando acesso ao carrinho, aba de "Meus Pedidos" e botão de logout caso o cliente deseje sair de sua conta recém criada
 	* Alert avisando que o email já foi cadastrado
-3. Teste com login
+2. **Teste com login**
+	*  Alert de email ou senha incorretos
+	*  Alert de email ou senha incorretos e aviso do campo de texto do forms de login
+	*  Login realizado com sucesso, dando acesso ao carrinho, aba de "Meus Pedidos" e botão de logout caso o cliente deseje sair de sua conta recém criada
+	*  Logout é realizado, fazendo com que abas de carrinho e "Meus Pedidos" sumam
+3. **Teste com busca**
+	* Nada é retornado na sessão de loja, uma vez que o produto não existe no catálogo da loja
+	* As plantas de interior presentes no catálogo da loja são retornadas
+	* Todos os produtos da categoria "Planta" são retornados
+4. **Teste com funcionalidade específica de busca personalizada**
+	* Alert pedindo para que o cliente preencha todos os campos
+	* As plantas que possuem essas características são retornadas
+5. **Teste de navegação**
+	* Todas as páginas devem ser acessíveis e funcionais
+	* Todas as páginas devem ser acessíveis e funcionais
+6. 
 
 ## Procedimentos de Construção
 
