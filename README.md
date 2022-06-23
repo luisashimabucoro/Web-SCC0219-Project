@@ -56,9 +56,9 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 ### Seguindo um roteiro de testagem
 
 1. **Teste com cadastro**
-  - Cadastro feito com e-mail inválido.
-  - Cadastro em que o campo de senha não confere com o campo de confirmação da senha.
-  - Cadastro em que a senha possua menos de 8 caracteres.
+  * Cadastro feito com e-mail inválido.
+  * Cadastro em que o campo de senha não confere com o campo de confirmação da senha.
+  * Cadastro em que a senha possua menos de 8 caracteres.
 2. **Teste com login**
   - Login feito com campos vazios.
   - Login feito com campos inválidos (email sem “@”, senha com menos que 8 caracteres etc).
