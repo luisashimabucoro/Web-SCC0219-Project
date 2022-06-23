@@ -4,6 +4,8 @@
 - Matheus Bermudes Viana - 11849797
 - Wictor Dalbosco Silva - 11871027
 
+Link para teste do website hospedado: https://plant-shop-matheusbviana.vercel.app
+
 ## Requerimentos
 - O sistema deve ter dois tipos de usuário:
   - *Administradores*: São responsáveis por gerenciar administradores, clientes e podutos. Para utilizar a conta de administrador, utilize as credenciais admin@admin.com:admin no formato (email:senha)
