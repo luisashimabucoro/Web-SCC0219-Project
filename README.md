@@ -59,6 +59,8 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 	* Cadastro feito com e-mail inválido.
  	* Cadastro em que o campo de senha não confere com o campo de confirmação da senha.
  	* Cadastro em que a senha possua menos de 8 caracteres.
+ 	* Cadastro preenchido corretamente com dados válidos.
+ 	* Cadastro utilizando o mesmo email que o de um cadastro previamente realizado
 2. **Teste com login**
     * Login feito com campos vazios.
     * Login feito com campos inválidos (email sem “@”, senha com menos que 8 caracteres etc).
@@ -110,6 +112,17 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 
 
 ## Resultado dos Testes
+
+### Resultados esperados de acordo com o roteiro de testagem
+
+1. Teste com cadastro
+	* Alert avisando que o email é inválido e aviso do campo de texto do forms de cadastro
+	* Alert avisando que as senhas não batem
+	* Alert avisando que a senha deve possuir pelo menos 8 caracteres
+	* Cadastro e login realizado com sucesso, dando acesso ao carrinho, aba de "Meus Pedidos" e botão de logout caso o cliente deseje sair de sua conta recém criada
+	* Alert avisando que o email já foi cadastrado
+3. Teste com login
+
 ## Procedimentos de Construção
 
 Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/download/) e seu gerenciador de pacotes [npm](https://nodejs.org/en/download/) instalados.
