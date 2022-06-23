@@ -74,6 +74,8 @@ li{
 .hidden{
     width: 320px;
     height: 420px;
+    margin: 0 20px;
+    
 }
 .card:hover{
 
@@ -169,3 +171,6 @@ li{
     /* width: 100%; */
 }
 
+.li_loja{
+    margin: 0 20px;
+}
