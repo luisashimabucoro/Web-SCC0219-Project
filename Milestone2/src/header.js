@@ -60,7 +60,7 @@ function header(){
     console.log("lista contas:", lista_contas);
 
     let lista_admins = [
-        {login: 'admin@web.com', senha: 'admin'},
+        {login: 'admin@admin.com', senha: 'admin'},
         {login: 'admin2@web.com', senha: 'admin2'},
     ]
         
