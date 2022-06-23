@@ -81,20 +81,19 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 	* Navegação com admin (páginas do cliente + Clientes, Produtos, Compras, Editar Cliente, Editar Produto)
  
 6. **Teste com escolha de produto**
-	* Visualização.
+	* Ir na sessão de loja, filtrar por produtos mais caros primeiro, clicar no produto, alterar a sua quantidade e adicionar ao carrinho
 
 7. **Teste carrinho e check out**
-	* Compra com carrinho vazio.
-	* Editar quantidade de um determinado produto.
-	* Remover um produto.
-	* Checando a integridade dos produtos, conferindo se o produto está somente no carrinho da conta em que foi adicionado.
+	* Compra com carrinho vazio
+	* Editar quantidade de um determinado produto dentro do carrinho
+	* Remover um produto do carrinho
 
 8. **Teste editar produto**
 	* Alterar informações do produto que precisam ser mudadas e buscar pelo produto na barra de navegação.
 
 9. **Teste inserir produto**
-	* Inserir produto com campos vazios.
-	* Inserir produto com campos inválidos.
+	* Inserir produto com campos vazios
+	* Inserir produto com campos inválidos (ex: preço : "vinte", link não é um url)
 
 10. **Teste remover produto**
 	* Removendo um produto.
@@ -137,7 +136,15 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 5. **Teste de navegação**
 	* Todas as páginas devem ser acessíveis e funcionais
 	* Todas as páginas devem ser acessíveis e funcionais
-6. 
+6. **Teste com escolha de produto**
+	* Os produtos mais caros da loja devem aparecer (equipamento), então quando clicados seus dados aparecem na página de produto e sua quantidade pode ser alterada entre os valores [1, estoque atual] e quando quando o botão de adicionar ao carrinho é clicado o produto é colocado na página de carrinho do cliente
+7. **Teste carrinho e check out**
+	* Alert avisando o cliente que ele não possui itens no carrinho
+	* A quantidade deve poder ser alterada entre os valores [1, estoque atual]
+	* Produto é removido do carrinho com sucesso
+8. **Teste inserir produto**
+	* Alert avisando o admin que todos os campos de dados do produto devem ser preenchidos
+	* 
 
 ## Procedimentos de Construção
 
