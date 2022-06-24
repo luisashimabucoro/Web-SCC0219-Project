@@ -41,7 +41,7 @@ Para que essas funcionalidades possuam um funcionamento adequado será necessár
     - *planta*: além dos atributos padrões, elas possuem tamanho, nível de iluminação, temperatura, manutenção ideais e categoria
 
 ### Diagrama de Navegação
-<img src="Mockups/diagramaNavegacao.png" alt="navigation diagram" width="700"/>
+<img src="Mockups/diagrama_navegacao.png" alt="navigation diagram" width="700"/>
 
 <a href="https://www.figma.com/file/3dgTdFB6VzP9HX0n41i1g5/Plant-Shop-Website-(Practice-%23001)-(Community)-(Copy)?node-id=0%3A1">Projeto no Figma</a>
 ## Comentários Sobre o Código
