@@ -60,6 +60,11 @@ function criar_produto(){
 
     const salvar_criacao = () => {
         
+        if(!document.getElementById('produtoImg').checkValidity()){
+            alert("Link de imagem inválido!");
+            return;
+        }
+        
         let tamanho = $('input[name=tamanho]:checked', '.form-criar-produto').val();
         let iluminacao = $('input[name=iluminacao]:checked', '.form-criar-produto').val();
         let temperatura = $('input[name=temperatura]:checked', '.form-criar-produto').val();
