@@ -46,6 +46,12 @@ function editar_produto(){
     console.log(produto_atualizado);
 
     const salvar_edicao = () => {
+        
+        if(!document.getElementById('produtoImg').checkValidity()){
+            alert("Link de imagem inválido!");
+            return;
+        }
+        
         let tamanho = $('input[name=tamanho]:checked', '.form-editar-produto').val();
         let iluminacao = $('input[name=iluminacao]:checked', '.form-editar-produto').val();
         let temperatura = $('input[name=temperatura]:checked', '.form-editar-produto').val();
