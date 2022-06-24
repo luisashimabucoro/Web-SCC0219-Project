@@ -95,7 +95,7 @@ function addProduto(){
 }
 
 function addiProduto(){
-  if(localStorage.getItem('produto1') == null){
+  if(localStorage.getItem('quantidadeProdutosTotal') < 1){
     for (let i = 0; i < 42; i++) {
       console.log("readicioandno")
       localStorage.setItem(`produto${i}`, JSON.stringify(products[i]));
