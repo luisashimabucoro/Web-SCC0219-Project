@@ -93,7 +93,7 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 
 9. **Teste inserir produto**
 	* Inserir produto com campos vazios
-	* Inserir produto com campos inválidos (ex: preço : "vinte", link não é um url)
+	* Inserir produto com campos inválidos (ex: preço : "vinte"; url inválida)
 
 10. **Teste remover produto**
 	* Removendo um produto.
@@ -142,9 +142,21 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 	* Alert avisando o cliente que ele não possui itens no carrinho
 	* A quantidade deve poder ser alterada entre os valores [1, estoque atual]
 	* Produto é removido do carrinho com sucesso
+8. **Teste editar produto**
+	* O produto editado deve ser encontrado ao buscar pelas novas características atualizadas
 9. **Teste inserir produto**
 	* Alert avisando o admin que todos os campos de dados do produto devem ser preenchidos
-	* 
+	* Alert avisando o admin que o link da imagem é inválido
+10. **Teste remover produto**
+	* Alert avisando que o produto foi removido, e o produto não deve ser mais encontrado na loja
+11. **Teste remover cliente**
+	* O cliente é removido, não sendo mais possível logar na conta dele
+12. **Teste visualizar pedidos (admin)**
+	* Caso existam compras, elas serão exibidas em uma lista, exibindo o comprador, o produto e o preço.
+13. **Teste visualizar compras (cliente)**
+	* As compras serão exibidas em lista, com informações da compra e os últimos 4 dígitos do cartão utilizado.
+14. **Teste visualizar produtos (admin)**
+	* Devem ser exibidos todos os produtos existentes na loja, com a possibilidade de edição por parte do admin.
 
 ## Procedimentos de Construção
 
