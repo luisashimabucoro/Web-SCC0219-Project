@@ -45,6 +45,13 @@ function editar_produto(){
     var produto_atualizado; 
     console.log(produto_atualizado);
 
+    const excluir_produto = () => {
+        alert("Removendo");
+        localStorage.setItem(`produto${id_produto}`, "");
+        localStorage.setItem('quantidadeProdutosTotal', parseInt(localStorage.getItem('quantidadeProdutosTotal'))-1);
+        navigate('/admin_products')
+    }
+    
     const salvar_edicao = () => {
         
         if(!document.getElementById('produtoImg').checkValidity()){
@@ -204,7 +211,8 @@ function editar_produto(){
                     </textarea>
                 </div>
 
-                <button onClick={salvar_edicao} id="salvar">Salvar</button>
+                <button onClick={salvar_edicao} id="salvar-produto">Salvar</button>
+                <button onClick={excluir_produto} id="excluir-produto">Excluir</button>
                 
             </div>
 
