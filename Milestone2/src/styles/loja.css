@@ -1,9 +1,6 @@
 *{
     box-sizing: border-box;
 }
-#loja{
-    padding: 8px;
-}
 
 .titulo_loja{
     text-align: center;
@@ -45,6 +42,9 @@ ul{
 li{
     display: inline-block;
 }
+.li_loja{
+    margin: 0 20px;
+}
 
 .card{
     background-color: white;
@@ -71,10 +71,10 @@ li{
     grid-column: 6;
 }
 .hidden{
+    margin: 0 20px;
+
     width: 320px;
     height: 420px;
-    margin: 0 20px;
-    
 }
 .card:hover{
 
@@ -170,6 +170,3 @@ li{
     /* width: 100%; */
 }
 
-.li_loja{
-    margin: 0 20px;
-}
