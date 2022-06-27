@@ -132,11 +132,16 @@ function atualiza_vetor_produtos(ordenacao){
 
 function buscaCategoria(tipo, indice, ordenacao){
   atualiza_vetor_produtos(ordenacao);
+  try{
     if(products.filter(produto => produto.tipo == tipo)[indice] != undefined){
       return products.filter(produto => produto.tipo == tipo)[indice]
     }else{
       return null;
     }
+
+  }catch(e){
+    console.error(e);
+  }
 
 }
 
@@ -256,7 +261,7 @@ function produtos(props){
               <img className="imagem_card_produto" src={produto_atual.img} />
               <p>{produto_atual.name}</p>
               <h3>R$ {produto_atual.price}</h3>
-              <a id="botao-carrinho" href="#" onClick={adicionar_direto_carrinho}>Adicionar ao carrinho</a>
+              {/* <a id="botao-carrinho" href="#" onClick={adicionar_direto_carrinho}>Adicionar ao carrinho</a> */}
               </div>
               }
             </div>

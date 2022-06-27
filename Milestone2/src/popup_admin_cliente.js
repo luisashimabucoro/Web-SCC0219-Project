@@ -30,18 +30,18 @@ function popup_admin_cliente(){
                 <div className="info_cliente">
                     <p className="titulo_exclusao">Excluir Cliente:</p>
                     <div className="popup_info-text-fields">
-                        <p><i>Nome do cliente:</i> {cliente_atual.nome_usuario}</p>
+                        <p><i>Nome:</i> {cliente_atual.nome_usuario}</p>
                         <br/>
                         <hr/>
-                        <p><i>ID do cliente: </i>{id_cliente}</p>
-                        <br/>
-
-                        <hr/>
-                        <p><i>Email do cliente: </i>{cliente_atual.email}</p>
+                        <p><i>ID: </i>{id_cliente}</p>
                         <br/>
 
                         <hr/>
-                        <p><i>Telefone do cliente: </i>{cliente_atual.telefone}</p>
+                        <p><i>Email: </i>{cliente_atual.email}</p>
+                        <br/>
+
+                        <hr/>
+                        <p><i>Telefone: </i>{cliente_atual.telefone}</p>
                         <br/>
                         <hr/>
                     </div>

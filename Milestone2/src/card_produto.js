@@ -50,7 +50,7 @@ function card_produto(index){
     const aumentarQuantidade = () =>{
         console.log("estoque atual:", estoque_atual);
         console.log("qnt:", qnt);
-        if (qnt < estoque_atual){
+        if (qnt <= estoque_atual){
             console.log("AUMENTOU");
             localStorage.setItem(`quantidade_produto${index.index}`, parseInt(localStorage.getItem(`quantidade_produto${index.index}`)) + 1);
             localStorage.setItem('preco_total', parseInt(localStorage.getItem('preco_total')) + parseInt(produtoCarrinho.price));
