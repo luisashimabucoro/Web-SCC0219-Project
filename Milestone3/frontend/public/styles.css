@@ -1,0 +1,17 @@
+
+*{
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+
+}
+
+:root{
+    --verde_escuro: #003734;
+    --cor_letra: #CCD7D6;
+    --verde_claro: #ADD4AC;
+}
+
+.parent{
+    position: relative;
+    min-height: 100vh;
+}

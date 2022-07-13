@@ -1,0 +1,10 @@
+.compra-feita-janela{
+    text-align: center;
+    background-color: var(--verde_escuro);
+    color: var(--verde_claro);
+    height: 1000px;
+}
+
+.produtos_comprados{
+    font-size: 40px;
+}
