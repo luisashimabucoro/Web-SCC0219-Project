@@ -1,0 +1,433 @@
+body {
+    font-size: 14px;
+    background: rgba(172,212,171,1);
+    margin: 0;
+}
+
+
+/* Barra de Navegação */
+.barra_superior {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    background: #fff;
+    opacity: 1;
+    margin: -7px -0 0px;
+    justify-content: center;
+}
+
+.barra_superior li {
+    display: flex;
+    height: 125px;
+    margin: -7px -0 0px;
+}
+ 
+.barra_superior a{
+    text-decoration: none;
+    color: #00371A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botoes_barra{
+    font-size: 26px;
+    margin: auto 2rem;
+}
+
+.botoes_barraDIR{
+    margin: auto 2rem;
+    font-size: 26px;
+    float: right;
+    text-underline-offset: 8px;
+    outline: 0;
+}
+
+.titulo_exclusao{
+    padding-bottom: 0px;
+    border-bottom: 2px solid black;
+}
+
+.buscar{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    text-underline-offset: 8px;
+    width: 300px;
+    border-bottom: 2px solid black;
+}
+
+.buscar:focus{
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    text-underline-offset: 8px;
+    border-bottom: 2px solid black;
+}
+
+.carrinho{
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 10px;
+    margin: 32px 0rem;
+    float: right;
+    background-color:rgb(195, 193, 193);
+}
+
+.login{
+    height: 480px;
+    width: 458px;
+    background-color: #003734;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+
+.email{
+    font-size: 30px;
+}
+
+ul{
+    display:flex;
+    list-style-type: none;
+}
+
+li{
+    margin: 0 30px 20px;
+
+}
+
+.lista2{
+    justify-content: center;
+}
+
+
+/* ----------------------- EDITAR PRODUTO -----------------------*/
+*{
+    box-sizing: border-box;
+    font-family: Source Sans Pro;
+    margin: 0;
+}
+
+:root{
+    --verde_escuro: #003734;
+    --cor_letra: #CCD7D6;
+    --verde_claro: #ADD4AC;
+}
+.janela_produto{
+    width: 100%;
+    height: 100%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(12, 8.3%);
+    grid-template-rows: 55% 30% 10%;
+    row-gap: 40px;
+}
+
+/* .janela_produto div{
+    margin: 0 auto;
+} */
+
+#teste{
+    text-align: center;
+}
+
+.foto_produto{
+    /* background-image: url(../public/images/produto.png); */
+    background-size: cover;
+    grid-column: 2;
+    height: 580px;
+    width: 690px;
+    background-color:  white;
+    border: 10px solid var(--verde_escuro);
+    background-repeat: no-repeat;
+}
+
+.info_cliente{
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    padding: 50px 40px;
+    /* grid-column: 10; */
+    justify-content: center;
+    align-self: center;
+    /* width: 490px; */
+    /*width: 300%;*/
+    background-color: var(--verde_escuro);
+    border-radius: 30px;
+    align-self: center;
+  
+}
+
+.info_cliente p{
+    /* text-align: left; */
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    /* text-align: center; */
+    margin: -10px auto;
+    padding-bottom: 20px;
+}
+
+
+.adicionar_carrinho{
+    margin: 40px 0 0 25px;
+    text-align: center;
+    background-color: var(--verde_claro);
+    color: var(--verde_escuro);
+    width: 363px;
+    height: 70px;
+    border-radius: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: underline;
+
+}
+
+.descricao_produto{
+    display: flex;
+    padding: 30px 31px 20px 28px;
+    grid-row: 2;
+    grid-column: 2;
+    grid-column-end: 12;
+    justify-content: flex-end;
+    /* width: 1290px; */
+    height: 100%;
+    /* border: 5px solid var(--verde_escuro); */
+    border-radius: 50px;
+    background-color: #003734;
+}
+
+.descricao_produto h1{
+    color: #fff;
+    width: 250px;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea {
+    resize: none;
+    height: 100%;
+    width: 80%;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 10px;
+    background-color: #487c6475;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    color: #fff;
+}
+
+.descricao_produto p{
+    margin: 20px 0 auto 40px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botoes{
+    width: 100%;
+    text-align: center;
+}
+
+.botoes > div{
+    padding: 10px;
+    width: calc(100%/6);
+    display: inline-block;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#delete {
+    grid-row: 3;
+    grid-column: 6;
+    grid-column-end: 8;
+    border-radius: 100px;
+    /* width: 300px; */
+    width: 100%;
+    height: 70px;
+
+    background-color: #003734;
+    color: #ADD4AC;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border: none;
+}
+
+#cancel {
+    grid-row: 3;
+    grid-column: 6;
+    grid-column-end: 8;
+    border-radius: 100px;
+    /* width: 300px; */
+    width: 100%;
+    height: 70px;
+
+    background-color: #003734;
+    color: #ADD4AC;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border: none;
+}
+
+button#cancel:hover {
+    color: #fff;
+    border: 3px solid #fff;
+
+}
+
+button#delete:hover {
+    color: #fff;
+    border: 3px solid #fff;
+
+}
+
+input.info-inputs {
+    padding: 8px 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    margin: 2% auto 5% auto;
+    /* margin-bottom: 5%; */
+
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.info-buttons {
+    width: 50%;
+}
+
+.info-text-fields{
+    padding-top: 30px;
+    
+}
+
+.info-text-fields p {
+    /* text-align: left; */
+    border-bottom: 2px solid gray;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    /* text-align: center; */
+    margin: -10px auto;
+}
+
+input.info-inputs:focus, input.info-inputs:not(:placeholder-shown) {
+    background-color: #487c6475;
+    color: white;
+    outline: none;
+}
+
+.info-buttons p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 2px auto;
+}
+
+.radio-atributos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-atributos input[type="radio"] {
+    /* opacity: 0; */
+    display: none;
+    /* position: fixed; */
+    /* width: 0; */
+  }
+
+.radio-atributos label {
+      background-color: #fff;
+      margin: 5px;
+      padding: 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      /* border: 2px solid #444; */
+      border-radius: 10px;
+      width: 30%;
+      height: 40px;
+      color: #003734;
+      font-weight: 600;
+      text-align: center;
+}
+
+.radio-atributos label:hover {
+    background-color: #daf3da;
+}
+
+input[type="radio"]:checked + label {
+    background-color:#a3f6a3;
+    border: 2px solid #fff;
+    color: #003734;
+}
+
+
+/* Rodapé */
+.rodape {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    height:200px;  
+    background:#fff;
+    display: flex;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(20, 102, 20);
+}
+
+.rodape h3{
+    font-size: 30px;
+    color: #00371A;
+}
+.rodape h6{
+    font-size: 22px;
+    color: #00371A;
+
+    margin: -20px 0 20px;
+    font-weight: normal;
+}
+
+.rodape img{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 250px; 
+    height: 200px;
+}
+
+.atendimento{
+    display: inline-block;
+    width: 300px;
+    margin-top: -20px;
+}
+
+.localizacao{
+    width: 500px;
+    margin-top: -20px;
+}
+
+.textinhos{
+    display: flex;
+    margin: 0px 0 0 30px;
+    padding: 20px 0 0;
+}

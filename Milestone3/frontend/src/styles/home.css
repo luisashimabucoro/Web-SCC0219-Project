@@ -1,0 +1,198 @@
+body {
+    font-size: 14px;
+    background: rgba(172,212,171,1);
+    margin: 0;  
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.foto1{
+    height: 900px;
+    background: url("../button_images/fundo.png");
+    height: 1100px;
+    width: 100%;
+    margin-top: 0px;
+    overflow: auto;
+    background-size: cover;
+    text-align: center;
+}
+
+.quiz{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ;
+    background-color: rgb(33, 63, 54, 0.7);
+    backdrop-filter: blur(20px);
+    width: 761px;
+    height: 639px;
+    margin: 116px 0 0 116px;
+    border-radius: 50px;
+}
+
+.buttonQuiz{
+    color: #213F36;
+    background-color: #ADD4AC;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 30px;
+    width: 35%;
+
+    position: absolute;
+    bottom: 0;
+    left: 27%;
+    padding: 20px;
+    margin: 0px 40px 70px 40px;
+}
+
+
+.quiz h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    /* padding: 50px 10px; */
+    color: #D2FFCB;
+    text-align: center;
+    width: 580px;
+    position: absolute;
+    top: 235px;
+    left: 15%;
+}
+
+.quiz img{
+    position: absolute;
+    left: 29%;
+    width: 40%;
+    /* width: 133px; */
+    /* height: 103px; */
+}
+
+.home-ondinha{
+    background-image: url('../button_images/detalhe2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    position: absolute;
+    width: 100%;
+    height: 471px;
+    top: 900px;
+    z-index: 0;
+    transform: scaleX(-1)
+}
+
+.home-parent{
+    position: relative;
+    height: 1820px;
+}
+.tipos_produtos{
+    z-index: 2;
+    height: 720px;
+    margin-top: 20px;
+    background-color: #003430;
+    /* margin: 0 auto; */
+    /* padding: 0 20%; */
+    padding-bottom: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tipos_produtos h1{
+    padding: 15px;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.lista_produtos{
+    justify-content: center;    
+}
+
+.slide{
+    width: 280px;
+    height: 225px;
+    width: 320px;
+    height: 245px;
+    background-image: url("../button_images/slide_produto.png");
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+}
+
+#plantasCasa{
+    background-image: url("../button_images/plantas\ internas.jpg");
+    background-size: cover;
+}
+
+#suculentas{
+    background-image:url("../button_images/suculentas.jpeg");
+    background-size: cover;
+}
+
+#arbustos{
+    background-image:url("../button_images/arbustos.jpg");
+    background-size: cover;
+}
+
+#hortinha{
+    background-image:url("../button_images/hortinha.jpg");
+    background-size: cover;
+}
+
+#vasos{
+    background-image:url("../button_images/vasos.jpg");
+    background-size: cover;
+}
+
+#equipamentos{
+    background-image:url("../button_images/equipamentos.jpg");
+    background-size: cover;
+}
+
+#fertilizantes{
+    background-image:url("../button_images/fertilizantes.jpg");
+    background-size: cover;
+}
+
+
+.slide a{
+    display: block;
+}
+
+.linkproduto{
+    width: 100%;
+    height: 100%;
+}
+
+.lista_produtos ul{
+    display:flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-right: 15%;
+}
+
+.lista_produtos li{
+    margin: 0 60px 40px;
+}
+/* 
+.lista2{
+    justify-content: center;
+} */
+
+.slide h2{
+    text-align: left;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    margin: 10px;
+    border: 20px;
+    padding: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display:table-cell;
+    border-radius: 20px;
+    background-color: rgba(59, 70, 67, 0.7);
+    backdrop-filter: blur(5%);
+}
