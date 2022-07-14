@@ -215,11 +215,11 @@ function header(){
                             localStorage.setItem('clienteAtivo', `cliente?${new_account.id}`);
                             localStorage.setItem(`numero_compras_cliente${new_account.id}`,0);
                             localStorage.setItem('id_cliente_ativo', new_account.id);
-							// this.$cookies.set("account_id", id);
-							// window.location.href = "/perfil-cliente";
 							break;
 						} else id++;
                     }
+                    navigate('/home');
+                    return;
             }
             alert("Senhas não conferem.")
         }

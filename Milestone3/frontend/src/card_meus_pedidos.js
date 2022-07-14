@@ -33,7 +33,7 @@ function card_lista_compras(){
     const [items, setItems] = useState([]);
     
     let id_cliente_ativo = localStorage.getItem('id_cliente_ativo')
-
+    console.log(id_cliente_ativo);
     const [dados_compras, setDados_compras] = useState([]);
     const carrega_compras = async () =>{
         let response = await fetch(
@@ -79,9 +79,9 @@ function card_lista_compras(){
         }
     }
     console.log("lenth array_teste", array_teste.length);
-    var array_html = [];
     console.log("compra display email", compra_atual[0]);
-
+    
+    var array_html = [];
     console.log("COMPRAS:::", compra_atual);
     console.log("AAAAAAAAAAAAAAA");
     console.log(dados_compras);
@@ -95,7 +95,7 @@ function card_lista_compras(){
                 console.log(dados_compras[0]);
                 console.log(iten.name);
                 array_html.push(
-            <div key={compra_atual[0].email} className="lista-compra-element">
+            <div key={dados_compras[0].email} className="lista-compra-element">
                 <p className="lista-compra-data">{dados_compras[i].data_compra}</p>
                 <p className="lista-compra-produto">{iten.name.substring(0, 20)}...</p>
                 <p className="lista-compra-quantidade">Quantidade: {iten.quantity}</p>
