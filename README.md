@@ -164,6 +164,9 @@ Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/downl
 
 Depois de instalados, serão necessários os arquivos localizados no diretório Milestone3, e rodar os seguintes comandos:
 
+
+Importante: A configuração de exibição do Windows deve estar em 100%, assim como o zoom do seu navegador :)
+
 Dentro da pasta backend:
 
 ```
