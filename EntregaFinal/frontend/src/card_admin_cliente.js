@@ -35,15 +35,15 @@ function card_admin_cliente(props){
     if(items != null){
         return (
             <div>
-            <div className="client-element">
-                <p id="admin_cliente_nome">{items.name}</p>
-                <p id="admin_cliente_email">{items.email}</p>
-                <p id="admin_cliente_telefone">{items.phone}</p>
-                <a href={`editar_cliente?${items.id}`}>
-                    <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/>
+                <a className="link-lista-clientes" href={`editar_cliente?${items.id}`}>
+                    <div className="client-element">
+                        <p id="admin_cliente_nome">{items.name}</p>
+                        <p id="admin_cliente_email">{items.email}</p>
+                        <p id="admin_cliente_telefone">{items.phone}</p>
+                            <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/>
+                        
+                    </div>
                 </a>
-                
-            </div>
         </div>
         )
     }else{

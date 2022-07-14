@@ -37,15 +37,15 @@ function card_admin_products(props){
         console.log(items);
     if(Object.size(items) > 0){
         return (
-            <div className="product-element">
-                <p className="produto-nome">{items.name.replace(/^(.{20}[^\s]*).*/, "$1")}...</p>
-                <p className="produto-estoque">Estoque: {items.estoque}</p>
-                <p className="produto-preco">Preço: R${parseInt(items.price).toFixed(2)}</p>
-                <p className="produto-quantidadevendida">Qnt vendida:{items.quantidadeVendida}</p>
-                <Link to={`/editar_produto?${items.id}`}>
-                    <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/>
-                </Link>
-            </div>
+            <Link className="link-lista-produtos" to={`/editar_produto?${items.id}`}>
+                <div className="product-element">
+                    <p className="produto-nome">{items.name.replace(/^(.{20}[^\s]*).*/, "$1")}...</p>
+                    <p className="produto-estoque">Estoque: {items.estoque}</p>
+                    <p className="produto-preco">Preço: R${parseInt(items.price).toFixed(2)}</p>
+                    <p className="produto-quantidadevendida">Qnt vendida:{items.quantidadeVendida}</p>
+                        <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/>
+                </div>
+            </Link>
         )
     }
     else{

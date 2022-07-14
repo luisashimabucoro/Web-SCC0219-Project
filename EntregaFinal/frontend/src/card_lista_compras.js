@@ -99,6 +99,8 @@ function card_lista_compras(props){
             console.log(dados_compras[i]);
             try{
                 array_html.push(
+                <a className="link-lista-compra" href={`visualizar_compra?${dados_compras[i].id}?${dados_compras[i].num_compra}?${iten.id}`}>
+
             <div key={dados_compras[0].email} className="lista-compra-element">
                 {/* <p className="compra-data">{dados_compras[i].data}</p> */}
                 <p className="compra-nome">{dados_compras[i].name}</p>
@@ -106,14 +108,13 @@ function card_lista_compras(props){
                 <p className="compra-endereco">{dados_compras[i].cep}</p>
                 <p className="compra-quantidade">Quantidade: {iten.quantity}</p>
                 <p className="compra-preco">Preço: R${iten.price*iten.quantity}</p>
-                <a href={`visualizar_compra?${dados_compras[i].id}?${dados_compras[i].num_compra}?${iten.id}`}>
                     {/* <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/> */}
                     <img src={require("./button_images/eye2.png")} alt="Botão de editar"/>
 
-                </a>
                 {/* <p className="lista-compra-digitos">****{dados_compras[i].ultimos_digitos}</p> */}
     
             </div>
+                </a>
             )
            }catch(e){
                 console.log(e);

@@ -26,8 +26,7 @@ function admin_clientes(){
                     <CardAdminCliente indice={15} />
                     <CardAdminCliente indice={16} />
                     <CardAdminCliente indice={17} />
-                    <CardAdminCliente indice={18} />
-                
+      
                 </div>
 
                 <div className="lista_ondinha">
