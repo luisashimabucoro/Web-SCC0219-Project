@@ -1,0 +1,181 @@
+.popup-edit-client{
+    display: none;
+}
+
+.janela_cliente{
+    width: 100%;
+    height: 100%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 20%);
+    row-gap: 0px;
+
+}
+
+.popup_edit-panel {
+    position: relative;
+    text-align: center;
+    margin: 35px 15%;
+    /* padding-bottom: 250px; */
+    border-radius: 30px;
+    background-color: #013c37c6;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 0;
+    height: 900px;
+}
+
+.info_cliente{
+    /* margin: auto; */
+    text-align: center;
+    width: 100%;
+    height: 670px;
+    padding: 50px 40px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    background-color: var(--verde_escuro);
+    border-radius: 30px;
+    text-align: center;
+    margin-top: -130px;
+
+  
+}
+
+.info_cliente p{
+    /* text-align: left; */
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    /* text-align: center; */
+    margin: -10px auto;
+    /* padding-bottom: 10px; */
+}
+
+.botoes{
+    width: 170%;
+    text-align: center;
+    grid-row: 5;
+    grid-column: 2/3;
+    margin: 40px 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoes > div{
+    padding: 10px;
+    width: calc(100%/2);
+    display: inline-block;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#delete-cliente {
+    grid-row: 3;
+    grid-column: 6;
+    grid-column-end: 8;
+    border-radius: 100px;
+    /* width: 300px; */
+    width: 100%;
+    height: 80px;
+
+    background-color: #003734;
+    color: #ADD4AC;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border: none;
+}
+
+#cancel {
+    grid-row: 3;
+    grid-column: 6;
+    grid-column-end: 8;
+    border-radius: 100px;
+    /* width: 300px; */
+    width: 100%;
+    height: 80px;
+
+    background-color: #003734;
+    color: #ADD4AC;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    border: none;
+}
+
+button#cancel:hover {
+    color: #fff;
+    border: 3px solid #fff;
+
+}
+
+button#delete:hover {
+    color: #fff;
+    border: 3px solid #fff;
+
+}
+
+
+.info-buttons {
+    width: 50%;
+}
+
+.popup_info-text-fields{
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding-top: 30px;
+}
+
+.popup_info-text-fields p {
+    /* float: right; */
+    /* width: 50%; */
+    /* text-align: left; */
+    text-align: right;
+    color: white;
+    /* line-height: 2px; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    /* text-align: center; */
+    /* margin: 10px auto; */
+    margin-top: 30px;
+
+}
+
+i{
+    float: left;
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.destaque-admin{
+    margin-top: 15px;
+    color: rgb(154, 255, 166);
+    text-align: center;
+}
+
+.parent-editar-cliente{
+    position: relative;
+    margin-top: 15px;
+    min-height: 114vh;
+}
+
+.parent-editar-produto{
+    position: relative;
+    margin-top: 15px;
+    min-height: 133vh;
+}

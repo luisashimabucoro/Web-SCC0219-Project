@@ -1,0 +1,132 @@
+/* Painel de edição */
+
+.edit-panel {
+    position: relative;
+    text-align: center;
+    margin: 35px 15%;
+    padding-bottom: 40px;
+    border-radius: 30px;
+    /* background-color: #003430c6; */
+    background-color: #013c37c6;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    /* background-color: white; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 0;
+    height: 800px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    
+}
+
+.edit-panel::-webkit-scrollbar {
+    position: absolute;
+    width: 10px;
+    background-color: var(--verde_claro);
+    border-radius: 20px;
+    margin-right: 40px;
+    height: 50%;
+    /* margin-right: 20px; */
+}
+
+.edit-panel::-webkit-scrollbar-track {
+    /* --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  */
+    border-radius: 10px;
+    height: 50%;
+
+}
+
+.edit-panel::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 50%;
+
+    background-color: var(--verde_escuro);
+
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+}
+.panel-header {
+    /* display: inline; */
+    text-align: center;
+}
+
+.panel-header img {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin: -65px 4%;
+    background:none;
+}
+
+.edit-panel h1 {
+    color: #D2FFCB;
+    font-weight: 400;
+    font-size: 50px;
+    padding-top: 10px;
+    display: inline-flexbox;
+    margin: 20px 0;
+}
+
+.product-element {
+    width: 80%;
+    height: 46px;
+    margin: 10px 10%;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #D2FFCB;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.product-element p {
+    /* display: inline-block; */
+    font-weight: 400;
+    font-size: 20px;
+    margin: 5px 10%;
+}
+
+.produto-nome{
+    position: absolute;
+    left: 5%;
+}
+
+.produto-estoque{
+    position: absolute;
+    left: 29%;
+}
+
+.produto-preco{
+    position: absolute;
+    left: 42%;
+}
+
+.produto-quantidadevendida{
+    position: absolute;
+    left: 57%;
+}
+
+.product-element img {
+    width: 25px;
+    height: 25px;
+    margin: 0px 5px;
+    padding-top: 5px;
+    position: absolute;
+    right: 12%;
+    float: right;
+}
+
+
+.pageButtons{
+    margin-top: 40px;
+}
+.pagebutton{
+    /* text-align: left; */
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+    background-color: var(--verde_claro);
+    padding: 7px 7px;
+    margin-right: 1%;
+    font-weight: 1000;
+    border-radius: 50%;
+}

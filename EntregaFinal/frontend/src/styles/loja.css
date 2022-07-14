@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+}
+
+.titulo_loja{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: var(--verde_escuro);
+    margin: 40px auto;
+}
+
+.pagina_loja{
+    height: 1400px;
+    display: grid;
+    grid-template-columns: 325px 320px 320px 320px 320px;
+    grid-template-rows: repeat(3, 439px);
+
+    column-gap: 50px;
+}
+
+.select-ordem-produtos{
+    font-weight: 600;
+    display: flex;
+    margin: 20px auto 20px 20%;
+    font-size:40px;
+}
+
+#ordenacao_produtos{
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+ul{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    float: right;
+    list-style-type:none;
+    display:flex;
+    justify-content: center;
+}
+li{
+    display: inline-block;
+}
+.li_loja{
+    margin: 0 20px;
+}
+
+.card{
+    background-color: white;
+    width: 320px;
+    height: 420px;
+    opacity: 1;
+    border: 5px solid rgba(10,125,56,0.6);
+    border-radius: 10px;
+    text-align: center;
+    font-family: Amiko;
+    font-weight: normal;
+    font-size: 25px;
+}
+.card1{
+    grid-column: 3;
+}
+.card2{
+    grid-column: 4;
+}
+.card3{
+    grid-column: 5;
+}
+.card4{
+    grid-column: 6;
+}
+.hidden{
+    margin: 0 20px;
+
+    width: 320px;
+    height: 420px;
+}
+.card:hover{
+
+    border: 5px solid rgba(10,125,56,1);
+    margin: inherit;
+
+}
+
+.card img{
+    width: 80%;
+}
+
+.card h3{
+    font-size: 24px;
+    width: 320px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.imagem_card_produto{
+    height: 248px;
+    width: 248px;
+    padding: 20px;
+}
+
+
+.pagina_loja a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.paginas{
+    /* margin-top: 20px; */
+    height: 110px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.paginas .loja_pagebutton{
+
+    font-family: 'Segoe UI';
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--verde_claro);
+    color: var(--verde_escuro);
+    
+    padding: 20px;
+    border-radius: 40px;
+    margin: 0 20px;
+}
+
+.page_number{
+    font-family: 'Segoe UI';
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--verde_claro);
+    color: var(--verde_escuro);
+
+    margin: 0 20px;
+    height: 60px;
+    width: 60px;
+    padding: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.loja_ondinha{
+    background-image: url('../button_images/detalhe.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 671px;
+    top: 1180px;
+    z-index: -1;
+}
+
+.fora_estoque{
+    border-radius: 1px;
+    position: absolute;
+    background-color: black;
+    color: red;
+    opacity: 0.4;
+    height: 410px;
+    width: 16.3%;
+    /* width: 100%; */
+}
+.header-loja{
+    position: absolute;
+    height: 400px;
+    width: 250px;
+    /* background-image: url('../button_images/planta_fofinha2.png'); */
+    background-image: url('../button_images/outraplantinha.png');
+    top: -50px;
+    left: 50px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}

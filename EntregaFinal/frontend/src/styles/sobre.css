@@ -1,0 +1,70 @@
+.titulo_sobre{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 40px;
+    color: #003734;
+}
+
+.texto_sobre{
+    font-size: 24px;
+    font-family: Amiko;
+    margin: auto 40px;
+}
+
+.titulo_fundadores{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 40px;
+    color: #003734;
+}
+
+.cards_fundadores{
+    display: flex;
+    justify-content: center;
+}
+
+.fundador{
+    margin: 50px 60px;
+    font-family: Amiko;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    color: #003734; 
+}
+
+.fundador img{
+    width: 240px;
+    border-radius: 100%;
+}
+
+.fundador h1{
+    margin-bottom: 0px;
+}
+
+.fundador p{
+    margin-top: 0px;
+}
+
+.folha{
+    float: right;
+    width: 150px;
+    transform: scaleX(-1);
+    margin-right: 20px;
+    margin-top: -20px;
+    filter: blur(5px);
+}
+
+.sobre_ondinha{
+    background-image: url('../button_images/detalhe3.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 220px;
+    /* width: 100%; */
+    /* height: 271px; */
+    /* top: 1280px; */
+    z-index: -1;
+    transform: scaleX(-1);
+}

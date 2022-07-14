@@ -1,0 +1,347 @@
+/* Barra de Navegação */
+.barra_superior {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    background: #fff;
+    opacity: 1;
+    margin: -7px -0 0px;
+    justify-content: center;
+}
+
+.barra_superior li {
+    display: flex;
+    /* width: 100%; */
+    height: 125px;
+    margin: -7px -0 0px;
+    /* justify-content: center; */
+}
+ 
+.barra_superior a{
+    text-decoration: none;
+    color: #00371A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botoes_barra{
+    font-size: 30px;
+    font-size: 1.7rem;
+    margin: auto 2rem;
+}
+
+.botoes_barraDIR{
+    margin: auto 1rem;
+    font-size: 30px;
+    font-size: 1.7rem;
+
+    float: right;
+    text-underline-offset: 8px;
+    outline: 0;
+}
+
+.buscar{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  text-underline-offset: 8px;
+  /* width: 200px; */
+  margin-left: 50px;
+  border-bottom: 2px solid black;
+}
+
+.buscar:focus{
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    text-underline-offset: 8px;
+    border-bottom: 2px solid black;
+}
+
+.carrinho{
+    background: transparent !important;
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 10px;
+    margin: 35px 0rem;
+    float: right;
+    background-color:rgb(195, 193, 193);
+}
+
+.pedidos{
+  margin-top: 40px;
+}
+
+#opcoes-perfil{
+  display: none;
+  background-color: #003734;
+  border-radius:20px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  height: 180px;
+  width: 150px;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 80px;
+}
+.logout{
+  /* display: none; */
+  position: absolute;
+  right: 40%;
+  border-radius: 10px;
+  font-size: 26px;
+  padding: 5px 10px;
+  margin: 32px -2rem 32px 1rem;
+  float: right;
+  color: white !important;
+  /* background-color: rgb(162, 101, 101); */
+  background-color: #487c6480;
+  color: white !important;
+  top: 70px;
+  z-index: 2;
+  height: 45px;
+  width: 100px;
+}
+
+.editar-button-perfil{
+  /* display: none; */
+  position: absolute;
+  right: 40%;
+  border-radius: 10px;
+  font-size: 26px;
+  padding: 5px 10px;
+  margin: 32px -2rem 32px 1rem;
+  float: right;
+  color: white !important;
+  /* background-color: rgb(162, 101, 101); */
+  background-color: #487c64;
+  color: white !important;
+  top: 0px;
+  z-index: 2;
+  height: 45px;
+  width: 100px;
+  z-index: 2;
+}
+
+.logout:hover, .editar-button-perfil:hover {
+  background-color: #001d1b;
+  cursor: pointer;
+}
+.login{
+    height: 480px;
+    width: 458px;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #003734;
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+
+.email{
+    font-size: 30px;
+}
+
+#home{
+  margin-top: 12px;
+  height: 150px;
+  width: 150px;
+  background-image: url('../button_images/logo_fundo_branco.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#loja{
+  margin-left: 7rem;
+}
+#sobre{
+  margin-right: 5rem;
+}
+/* -------------------- LOGIN e CADASTRO POPUP -------------------- */
+
+#login-trigger{
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 8px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+  }
+
+#login-trigger {
+    border-radius: 3px 0 0 3px;
+  }
+
+.login-content {
+    display: none;
+    position: absolute;
+    top: 90px;
+    background: #082c2c;
+    border-radius: 12px;
+}
+
+li #login-popup {
+  z-index: 1;
+    right: 250px;
+    width: 440px;
+    height: 360px;
+}
+
+li #cadastro-popup {
+  z-index: 1;
+  right: 250px;
+  width: 580px;
+  height: 620px;
+}
+
+input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#inputs input {
+    padding: 6px 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    width: 400px;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.login-content ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+
+  #inputs input:focus {
+    background-color: #487c6475;
+    border-radius: 3px 3px 0 0;
+    color: white;
+    outline: none;
+  }
+
+  #login #actions {
+    margin: 10px 0 0 0;
+  }
+
+#login #submit, #cadastro #submit{
+    background-color: #487c64;
+    border-radius: 20px;
+    padding: 0;
+    height: 50px;
+    width: 240px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 14px;
+}
+
+#legenda-cadastro {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 11px;
+    font-size: 20px;
+}
+
+  #login #submit:hover,
+  #login #submit:focus {
+    background-color: #559376;
+  }
+
+  #login #submit:active {
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  #login label {
+    float: right;
+    line-height: 30px;
+  }
+
+  #login label input {
+    position: relative;
+    top: 2px;
+    right: 2px;
+  }
+
+  fieldset {
+    border: 0;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+#cesta_carrinho{
+  background: transparent !important;
+  width: 40px;
+  position: absolute;
+  right:10.5%;
+}
+
+#icon-perfil{
+  background: transparent !important;
+  width: 40px;
+  position: absolute;
+  right: 3.5%;
+  top: 30px
+}
+
+#icon-perfil:hover{
+  cursor: pointer;
+
+}
+/* -------------------- LOJA POPUP -------------------- */
+
+
+
+#loja-popup {
+  display: grid;
+  /* display: none; */
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.loja-popup-content {
+  /* display: inline-block; */
+  display: none;
+  position: absolute;
+  top: 60px;
+  padding-top: 2  0px;
+  left: 250px;
+  background: rgba(255, 255, 255, 0.913);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+#loja-popup p{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  color: #00413e;
+  margin: 2px 10px;
+}
+
+#loja-popup p.categoria-geral {
+  font-size: 28px;
+  color: #001d0e;
+  margin-bottom: 10px;
+}

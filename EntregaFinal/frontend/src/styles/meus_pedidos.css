@@ -1,0 +1,111 @@
+/* Painel de edição */
+
+.painel-meus-pedidos {
+    position: relative;
+    text-align: center;
+    margin: 35px 15%;
+    padding-bottom: 40px;
+    border-radius: 30px;
+    /* background-color: #003430c6; */
+    background-color: #013c37c6;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    /* background-color: white; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 0;
+    height: 800px;
+}
+
+.panel-header {
+    /* display: inline; */
+    text-align: center;
+}
+
+.panel-header img {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin: -65px 4%;
+    background:none;
+}
+
+.painel-meus-pedidos h1 {
+    color: #D2FFCB;
+    font-weight: 400;
+    font-size: 50px;
+    padding-top: 10px;
+    display: inline-flexbox;
+    margin: 20px auto;
+}
+
+.lista-compra-element {
+    width: 92%;
+    height: 52px;
+    margin: 10px 5%;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #D2FFCB;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.lista-compra-element p {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 5px 10%;
+}
+
+.lista-compra-data{
+    position: absolute;
+    left: -2%;
+}
+
+
+.lista-compra-produto{
+    position: absolute;
+    left: 12%;
+}
+
+.lista-compra-quantidade{
+    position: absolute;
+    left: 28%;
+}
+.lista-compra-preco{
+    position: absolute;
+    left: 40%;
+}
+.lista-compra-endereco{
+    position: absolute;
+    left: 52%;
+}
+.lista-compra-digitos{
+    position: absolute;
+    left: 75%;
+}
+
+.pageButtons{
+    margin-top: 40px;
+}
+.pagebutton{
+    /* text-align: left; */
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+    background-color: var(--verde_claro);
+    padding: 7px 7px;
+    margin-right: 1%;
+    font-weight: 1000;
+    border-radius: 50%;
+}
+
+.ondinha-meus-pedidos{
+    background-image: url(/static/media/detalhe2.388d24ab.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    height: 471px;
+    top: 700px;
+    z-index: -1;
+    transform: scaleX(-1);
+}
