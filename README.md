@@ -162,11 +162,20 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 
 Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/download/) e seu gerenciador de pacotes [npm](https://nodejs.org/en/download/) instalados.
 
-Depois de instalados, serão necessários os arquivos localizados no diretório Milestone2. Com o diretório aberto e com o comando no terminal 
+Depois de instalados, serão necessários os arquivos localizados no diretório Milestone3, e rodar os seguintes comandos:
+
+Dentro da pasta frontend:
 
 ```
 npm install
-npm start 
+npm start
+```
+
+Dentro da pasta backend:
+
+```
+npm install
+npm run server
 ```
 
 inicie o React, e aguarde a construção e abertura do servidor no navegador.
