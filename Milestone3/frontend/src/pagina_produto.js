@@ -138,6 +138,7 @@ function pagina_produto() {
                     <p >{items.descricao}</p>
                 </div>
             </div>
+            <div className="ondinha-pagina-produto"></div>
                 <Footer />
         </div>
     )

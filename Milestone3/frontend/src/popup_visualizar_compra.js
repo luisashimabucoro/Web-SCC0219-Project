@@ -10,9 +10,11 @@ function popup_admin_cliente(){
     const navigate = useNavigate();
 
     // const id_cliente = window.location.href.substring(window.location.href.lastIndexOf('?') + 1);
-    const id_cliente = window.location.href.substring(window.location.href.lastIndexOf('?') - 1);
-    let idAtual = id_cliente.split('?')[0];
-    let idCompraAtual = id_cliente.split('?')[1];
+    const id_cliente = window.location.href.substring(window.location.href.lastIndexOf('?') - 3);
+    var idAtual = id_cliente.split('?')[0];
+    var idCompraAtual = id_cliente.split('?')[1];
+    let id_do_produto = window.location.href.substring(window.location.href.lastIndexOf('?')+1);
+    console.log(id_do_produto);
     console.log(idAtual);
     console.log(idCompraAtual);
     console.log("id_cliente:", id_cliente);
@@ -29,6 +31,7 @@ function popup_admin_cliente(){
     var [cliente_comprador, set_cliente_comprador] = useState([]);
     var [produto, setProduto] = useState([]);
 
+    console.log(idAtual);
     const fetchItems = async () =>{
         const data = await fetch('/compras/'+idAtual);
         console.log(data);
@@ -37,12 +40,40 @@ function popup_admin_cliente(){
         console.log("cliente atual:", cliente_aatual);
         console.log(cliente_aatual[idCompraAtual]);
         console.log(cliente_aatual[0].produto[0].name);
-        setProduto(cliente_aatual[idCompraAtual].produto[0]);
+        let i = 0;
+        while(i<cliente_aatual.length){
+            for (let produtinho of cliente_aatual[i].produto){
+                console.log(i);
+                console.log("ENTRANDO NO FOR:::")
+                console.log(produtinho);
+                console.log(produtinho.id);
+                console.log(id_do_produto);
+                if (produtinho.id == id_do_produto){
+                    console.log("produto:", produtinho);
+                    setProduto(produtinho);
+                }
+                i++;
+            }
+        }
+            
+        
+        // setProduto(cliente_aatual[idCompraAtual].produto[0]);
         setItems(cliente_aatual[idCompraAtual]);
         calcula_cep(cliente_aatual[idCompraAtual]);  
-        let new_cliente_comprador = await fetch('http://localhost:3000/accounts/'+idAtual);
-        new_cliente_comprador = await new_cliente_comprador.json();
-        set_cliente_comprador(new_cliente_comprador);
+        console.log(idAtual);
+        let new_cliente_comprador = await fetch('http://localhost:3000/accounts/'+idAtual).catch(err => console.log(err));
+        console.log(new_cliente_comprador);
+        if(new_cliente_comprador.status == 200){
+            console.log("200");
+            new_cliente_comprador = await new_cliente_comprador.json();
+            set_cliente_comprador(new_cliente_comprador);
+        }else{
+            console.log("nao consta")
+            set_cliente_comprador(
+                "Não consta"
+            )
+        }
+        console.log(new_cliente_comprador);
     }
 
     const [city, setCity] = useState('Não consta');
@@ -78,7 +109,10 @@ function popup_admin_cliente(){
 
     console.log(produto);
     console.log(cliente_atual);
-    console.log(cliente_comprador);
+    if(cliente_comprador == undefined || cliente_comprador == null || cliente_comprador.length < 1){
+        cliente_comprador.phone = "Nao encontrado";
+    }
+    console.log(cliente_comprador.phone);
     return (
 
         <div className="parent-editar-cliente">

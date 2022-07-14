@@ -51,6 +51,7 @@ function fileira (props){
   indexProduto = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(value => value + (numero*12 ));
   return (
       <div className="janela-loja">
+        <div className="header-loja"/>
         <div className="titulo_loja">
           {tipo_produto == "busca_personalizada" ? <h1>Busca Personalizada</h1> : <h1>{tipo_produto.toUpperCase()}</h1>}
         </div>

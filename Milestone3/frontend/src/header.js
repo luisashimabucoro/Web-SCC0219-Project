@@ -131,6 +131,21 @@ function header(){
         $('#cadastro-popup').show();
     }
 
+    const trigger_perfil = () =>{
+
+        console.log("trigou")
+        // $('#opcoes-perfil').show();
+
+        let teste = $('#opcoes-perfil').css('display');
+        console.log(teste);
+        if(teste == 'none'){
+            $('#opcoes-perfil').show();
+        }else{
+            $('#opcoes-perfil').hide();
+        }
+       
+    }
+
 
     const fazCadastro = async (event) => {
         event.preventDefault();
@@ -216,52 +231,6 @@ function header(){
         
     }
 
-    const handle_cadastro = () => {
-        if(document.getElementById('cadastro_email').checkValidity()) {
-
-            if ($('#cadastro_senha').val() === $('#confirma_senha').val()){
-
-                if ($('#cadastro_senha').val().length < 8){
-                    alert("A senha deve ter no mínimo 8 caracteres!")
-                    return;
-                }
-                if (lista_contas.some(conta => conta.email === $('#cadastro_email').val())){
-                    alert('Email já cadastrado');
-                    return;
-                }
-                console.log("entrou");
-                let nova_conta = new Conta(
-                    $('#cadastro_nome').val(),
-                    $('#cadastro_senha').val(),
-                    $('#cadastro_email').val(),
-                    $('#cadastro_telefone').val()
-                );
-                
-                console.log("nova conta", nova_conta)
-                // lista_contas.push(nova_conta);
-                // localStorage.setItem(`cliente${new_account.id}`, JSON.stringify(nova_conta));
-                // localStorage.setItem('qtdClientes', parseInt(new_account.id) + 1);
-                localStorage.setItem('isLogged', true);
-                localStorage.setItem('isAdmin', false);
-                isLoggedIn.current = true;
-                isAdmin.current = false;
-                atualiza_contas();
-                console.log(lista_contas)
-                // localStorage.setItem('clienteAtivo', `cliente?${new_account.id) - 1}`);
-                // console.log("ativou cliente");
-                // localStorage.setItem(`numero_compras_cliente${new_account.id)-1}`,0);
-                // console.log("numero compras cliente novo:", localStorage.getItem(`numero_compras_clientes${new_account.id)-1}`));
-                // localStorage.setItem('id_cliente_ativo', new_account.id));
-                
-                // navigate('home');
-            }else{
-                alert('Senhas não conferem');
-            }
-        }else{
-            alert("Email inválido!")
-        }
-    }
-
     const trigger_login = () => {
         console.log("trigou")
         $('#login-trigger').next('.login-content').slideToggle(0);
@@ -293,16 +262,16 @@ function header(){
         }
     }
     const toggleLogin = () => {
-        isLoggedIn.current = false;
+        if(window.confirm("Você deseja realmente sair?")){
+            isLoggedIn.current = false;
 
-        localStorage.setItem('preco_total', 0);
-        localStorage.setItem('quantidade_no_carrinho', 0);
-        localStorage.setItem('carrinho', null);
-        for(let i = 0; i < 20; i++){
-            localStorage.removeItem(`carrinho_produto${i}`);  
+            localStorage.setItem('preco_total', 0);
+            localStorage.setItem('quantidade_no_carrinho', 0);
+            localStorage.setItem('carrinho', null);
+            localStorage.setItem('isLogged', false);
+            navigate('home');
         }
-        localStorage.setItem('isLogged', false);
-        navigate('home');
+        return;
     }
 
         // console.log(isLoggedIn);
@@ -414,15 +383,24 @@ function header(){
                         <Link className="carrinho adminCliente" to="/admin_clientes">Clientes</Link>
                         <Link className="carrinho adminProdutos" to="/admin_products">Produtos</Link>
                         <Link className="carrinho adminCompras" to="/lista_compras">Compras</Link>
-                        <a className="logout" onClick={toggleLogin}>Logout</a>
+                        <img id="icon-perfil" onClick={trigger_perfil} src={require('./button_images/icon-perfil.png')} alt="Perfil" />
+                        <div id="opcoes-perfil">
+                            <a href="editar_info_cliente" id="editar-perfil-button" className="editar-button-perfil">Editar</a>
+                            <a id="logout-button" className="logout" onClick={toggleLogin}>Logout</a>
+                        </div>
+                        {/* <a className="logout" onClick={toggleLogin}>Logout</a> */}
                    </li>
                     : 
                     <li>
                         <Link className="carrinho pedidos" to="meus_pedidos">Meus Pedidos</Link>
                         <Link className="carrinho" to="carrinho">
-                        <img id="cesta_carrinho" src={require('./button_images/cesta.png')} alt="Carrinho" />
+                            <img id="cesta_carrinho" src={require('./button_images/cesta.png')} alt="Carrinho" />
                         </Link>
-                        <a className="logout" onClick={toggleLogin}>Logout</a>
+                        <img id="icon-perfil" onClick={trigger_perfil} src={require('./button_images/icon-perfil.png')} alt="Perfil" />
+                        <div id="opcoes-perfil">
+                            <a href="editar_info_cliente" id="editar-perfil-button" className="editar-button-perfil">Editar</a>
+                            <a id="logout-button" className="logout" onClick={toggleLogin}>Logout</a>
+                        </div>
                     </li> 
                    
                 }
