@@ -53,7 +53,8 @@ function fileira (props){
       <div className="janela-loja">
         <div className="header-loja"/>
         <div className="titulo_loja">
-          {tipo_produto == "busca_personalizada" ? <h1>Busca Personalizada</h1> : <h1>{tipo_produto.toUpperCase()}</h1>}
+          {tipo_produto == "busca_personalizada" ? <h1>Busca Personalizada</h1> : tipo_produto == "busca" ? <h1>Busca por: {localStorage.getItem('busca')}</h1> : <h1>{tipo_produto.charAt(0).toUpperCase() + tipo_produto.slice(1)}</h1>}
+
         </div>
 
         <div className="select-ordem-produtos">
