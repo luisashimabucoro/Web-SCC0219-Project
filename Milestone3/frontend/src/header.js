@@ -111,6 +111,8 @@ function header(){
                 console.log(isLoggedIn.current);
                 if(account.admin){
                     localStorage.setItem('isAdmin', true);
+                    localStorage.setItem('clienteAtivo', `cliente?${account.id}`);
+                    localStorage.setItem('id_cliente_ativo', `${account.id}`);
                     isAdmin.current = true;
                 }else{
                     localStorage.setItem('clienteAtivo', `cliente?${account.id}`);
@@ -121,9 +123,9 @@ function header(){
                 navigate('/home');
                 return;
             }
-            // alert("login bem sucedido!");
-            navigate('/home');
         }
+        alert("Usuário ou senha incorretos!");
+        navigate('/home');
        
     }
 
@@ -149,12 +151,8 @@ function header(){
 
     const fazCadastro = async (event) => {
         event.preventDefault();
-        alert("fazendo cadastro!");
         if(document.getElementById('cadastro_email').checkValidity()) {
-        alert("fazendo cadastro2!");
-
             if ($('#cadastro_senha').val() === $('#confirma_senha').val()){
-                alert("fazendo cadastro3!");
 
                 if ($('#cadastro_senha').val().length < 8){
                     alert("A senha deve ter no mínimo 8 caracteres!")
@@ -162,12 +160,8 @@ function header(){
                 }
                 console.log("entrou no cadastro!");
 
-                alert("indo fazer fetch!");
                 let response = await fetch("http://localhost:3000/accounts/");
-                alert("fetchando!");
                 let accounts = await response.json();
-                alert("fezr fetch!");
-                alert(accounts);
                 
                 let exists = false;
                 for (let account of accounts){
@@ -227,7 +221,9 @@ function header(){
 						} else id++;
                     }
             }
+            alert("Senhas não conferem.")
         }
+        alert("Email inválido!")
         
     }
 

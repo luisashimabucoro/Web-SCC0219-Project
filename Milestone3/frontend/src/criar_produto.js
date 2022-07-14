@@ -114,7 +114,6 @@ function criar_produto(){
         console.log(novo_produto.id);
 
         let response = await fetch("http://localhost:3000/products/");
-        alert("fetchando!");
         let products = await response.json();
         let id = 1;
         console.log(tipoo);

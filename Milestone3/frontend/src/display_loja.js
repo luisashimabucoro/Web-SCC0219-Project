@@ -11,7 +11,7 @@ function fileira (props){
   let tipo_produto = props.tipo_produto;
 
 
-  const [numero, setNumero] = useState(0);
+  var [numero, setNumero] = useState(0);
   const [ordem, setOrdem] = useState(0);
 
   if(numero < 0 ){
@@ -22,7 +22,10 @@ function fileira (props){
     else return;
   }
   const handle_next = () =>{
-    if(numero < 3) setNumero(numero+1);
+    if(numero < 1) {
+      console.log("passando pagina");
+      setNumero(numero+1);
+    }
     else return;
   }
 
@@ -48,12 +51,15 @@ function fileira (props){
   var indexProduto;
   console.log(ordem);
   console.log(tipo_produto);
+  console.log(numero);
+
   indexProduto = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(value => value + (numero*12 ));
   return (
       <div className="janela-loja">
         <div className="header-loja"/>
         <div className="titulo_loja">
-          {tipo_produto == "busca_personalizada" ? <h1>Busca Personalizada</h1> : <h1>{tipo_produto.toUpperCase()}</h1>}
+          {tipo_produto == "busca_personalizada" ? <h1>Busca Personalizada</h1> : tipo_produto == "busca" ? <h1>Busca por: {localStorage.getItem('busca')}</h1> : <h1>{tipo_produto.charAt(0).toUpperCase() + tipo_produto.slice(1)}</h1>}
+
         </div>
 
         <div className="select-ordem-produtos">
@@ -92,8 +98,8 @@ function fileira (props){
         <button type="button" onClick={handle_prev} className="loja_pagebutton">Anterior</button>
         <button type="button" onClick={() => setNumero(0)}  className="page_number">1</button>
         <button type="button" onClick={() => setNumero(1)} className="page_number">2</button>
-        <button type="button" onClick={() => setNumero(2)}  className="page_number">3</button>
-        <button type="button" onClick={() => setNumero(3)}  className="page_number">4</button>
+        {/* <button type="button" onClick={() => setNumero(2)}  className="page_number">3</button> */}
+        {/* <button type="button" onClick={() => setNumero(3)}  className="page_number">4</button> */}
         <button type="button" onClick={handle_next}  className="loja_pagebutton">Próximo</button>
         </div>
 

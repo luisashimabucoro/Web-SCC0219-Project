@@ -31,7 +31,6 @@ function editar_produto(){
         if(document.getElementById('cadastro_email').checkValidity()) {
 
             if ($('#cadastro_senha').val() === $('#confirma_senha').val()){
-                alert("fazendo cadastro3!");
 
                 if ($('#cadastro_senha').val().length < 8){
                     alert("A senha deve ter no mínimo 8 caracteres!")

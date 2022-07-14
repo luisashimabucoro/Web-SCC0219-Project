@@ -64,7 +64,6 @@ function card_lista_compras(){
     // }    
     
     const exibe_info = () => {
-        alert("a")
         document.getElementById('endereco-compra').style.display = 'none';
     }
     compra_atual = compra_atual.filter(conta => {return conta != null;});

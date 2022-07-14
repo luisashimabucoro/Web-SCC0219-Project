@@ -128,6 +128,8 @@ function editar_produto(){
         console.log(produto_atualizado);
         localStorage.setItem(`produto${id_produto}`, JSON.stringify(produto_atualizado));
         alert("Produto editado com sucesso!");
+        navigate('/admin_products');
+
     }
     
     console.log(document.getElementsByClassName('editar-aspectos-planta')[0]);
