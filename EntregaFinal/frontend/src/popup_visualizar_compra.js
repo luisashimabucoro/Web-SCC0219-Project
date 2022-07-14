@@ -34,26 +34,37 @@ function popup_admin_cliente(){
     console.log(idAtual);
     const fetchItems = async () =>{
         const data = await fetch('/compras/'+idAtual);
+        console.log("______________________::::")
         console.log(data);
         // const items = await data.json();
         var cliente_aatual = await data.json();
+
+        if(cliente_aatual)
         console.log("cliente atual:", cliente_aatual);
         console.log(cliente_aatual[idCompraAtual]);
         console.log(cliente_aatual[0].produto[0].name);
+        for(let cliente of cliente_aatual){
+            console.log(cliente);
+        }
         let i = 0;
         while(i<cliente_aatual.length){
-            for (let produtinho of cliente_aatual[i].produto){
+            if(cliente_aatual[i].num_compra == idCompraAtual){
+                console.log("________:::WHILE::::__________")
                 console.log(i);
-                console.log("ENTRANDO NO FOR:::")
-                console.log(produtinho);
-                console.log(produtinho.id);
-                console.log(id_do_produto);
-                if (produtinho.id == id_do_produto){
-                    console.log("produto:", produtinho);
-                    setProduto(produtinho);
-                }
-                i++;
+                for (let produtinho of cliente_aatual[i].produto){
+                    console.log(i);
+                    console.log("ENTRANDO NO FOR:::")
+                    console.log(produtinho);
+                    console.log(produtinho.id);
+                    console.log(id_do_produto);
+                    if (produtinho.id == id_do_produto){
+                        console.log("produto:", produtinho);
+                        setProduto(produtinho);
+                    }
+                    i++;
+                }   
             }
+            i++;
         }
             
         
