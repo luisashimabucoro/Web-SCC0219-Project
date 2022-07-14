@@ -220,6 +220,7 @@ function header(){
 							break;
 						} else id++;
                     }
+		    navigate('/home');
 		    return;
             }
             alert("Senhas não conferem.")
