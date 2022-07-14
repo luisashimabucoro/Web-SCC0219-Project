@@ -103,11 +103,11 @@ function card_lista_compras(props){
             <div key={dados_compras[0].email} className="lista-compra-element">
                 {/* <p className="compra-data">{dados_compras[i].data}</p> */}
                 <p className="compra-nome">{dados_compras[i].name}</p>
-                <p className="compra-produto">{iten.name}</p>
+                <p className="compra-produto">{iten.name.substring(0, 20)}...</p>
                 <p className="compra-endereco">{dados_compras[i].cep}</p>
                 <p className="compra-quantidade">Quantidade: {iten.quantity}</p>
                 <p className="compra-preco">Preço: R${iten.price*iten.quantity}</p>
-                <a href={`visualizar_compra?${dados_compras[i].id}?${dados_compras[i].num_compra}`}>
+                <a href={`visualizar_compra?${dados_compras[i].id}?${dados_compras[i].num_compra}?${iten.id}`}>
                     {/* <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/> */}
                     <img src={require("./button_images/eye2.png")} alt="Botão de editar"/>
 
@@ -116,11 +116,12 @@ function card_lista_compras(props){
     
             </div>
             )
-            i++;
            }catch(e){
                 console.log(e);
             }
         }
+        i++;
+
     }
 
     // for (let i = 0; i < array_teste.length; i++) {

@@ -86,14 +86,19 @@ function card_lista_compras(){
     console.log("COMPRAS:::", compra_atual);
     console.log("AAAAAAAAAAAAAAA");
     console.log(dados_compras);
-    let i = 0 ;
+    // var i = 0 ;
+    var i = 0;
     for(let item of items){
+        console.log(item);
         for(let iten of item){
+            console.log(iten);
             try{
+                console.log(dados_compras[0]);
+                console.log(iten.name);
                 array_html.push(
             <div key={compra_atual[0].email} className="lista-compra-element">
                 <p className="lista-compra-data">{dados_compras[i].data_compra}</p>
-                <p className="lista-compra-produto">{iten.name}</p>
+                <p className="lista-compra-produto">{iten.name.substring(0, 20)}...</p>
                 <p className="lista-compra-quantidade">Quantidade: {iten.quantity}</p>
                 <p className="lista-compra-preco">Preço: R${iten.price*iten.quantity}</p>
                 <p className="lista-compra-endereco">{dados_compras[i].endereco}</p>
@@ -101,34 +106,13 @@ function card_lista_compras(){
     
             </div>
             )
-            i++;
            }catch(e){
                 console.log(e);
             }
-        }
-    }
-    // for (let i = 0; i < array_teste.length; i++) {
-    //     console.log("i", i)
-    //     try{
             
-    //         array_html.push(
-    //     <div key={compra_atual[0].email+i} className="lista-compra-element">
-    //         <p className="lista-compra-data">{array_teste[i].data_compra}</p>
-    //         <p className="lista-compra-produto">{array_teste[i].name}</p>
-    //         <p className="lista-compra-quantidade">Quantidade: {array_teste[i].quantidade_comprada}</p>
-    //         <p className="lista-compra-preco">Preço: R${array_teste[i].price*array_teste[i].quantidade_comprada}</p>
-    //         <p className="lista-compra-endereco">{array_teste[i].endereco}</p>
-    //         <p className="lista-compra-digitos">****{array_teste[i].ultimos_digitos}</p>
-
-    //     </div>
-    //    )}catch(e){
-    //         console.log(e);
-    //     }
-       
-    // }
-
-
-
+        }
+        i ++;
+    }
 
     console.log("ARRAY PRODUTOS", array_teste);
     console.log("ARRAY HTML", array_html);
@@ -140,7 +124,9 @@ function card_lista_compras(){
         compra_display[i] = retorno[i];
     }
 
-    
+    console.log(retorno);
+    console.log();
+
     var retorno_compras = []
     for (let i = 0; i < compra_atual.length; i++) {
         console.log("i", i)
@@ -163,7 +149,7 @@ function card_lista_compras(){
 
     console.log("indice agora;", indice)
     console.log("retorno_compras", retorno_compras);
-    if(retorno_compras != null){
+    if(array_html != null){
         return (
             <div>
                 {array_html}

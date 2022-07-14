@@ -16,6 +16,7 @@ import ListaCompras from './lista_compras';
 import MeusPedidos from './meus_pedidos';
 import VisualizarCompra from './popup_visualizar_compra';
 import React from 'react';
+import EditarInfoCliente from './editar_info_cliente';
 
 /* eslint-disable */
 
@@ -72,6 +73,8 @@ function App() {
               <Route path="/meus_pedidos" element={<MeusPedidos />}/>
 
               <Route path="/visualizar_compra" element={<VisualizarCompra />}/>
+
+              <Route path="/editar_info_cliente" element={<EditarInfoCliente />}/>
 
 
             </Routes>

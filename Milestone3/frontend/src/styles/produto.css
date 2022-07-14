@@ -40,6 +40,8 @@
 }
 
 .info_produto{
+    border-radius: 15px;
+
     padding: 60px 40px;
     grid-column: 10;
     width: 490px;
@@ -116,7 +118,10 @@
     height: 450px;
     border: 5px solid var(--verde_escuro);
     color: white;
-    background-color: var(--verde_escuro)
+    background-color: var(--verde_escuro);
+    opacity: 0.95;
+    z-index: 0;
+    border-radius: 35px;
 }
 
 .descricao_produto h1{
@@ -133,4 +138,17 @@
 
 button:hover{
     cursor: pointer;
+}
+
+.ondinha-pagina-produto{
+    background-image: url('../button_images/detalhe.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 271px;
+    top: 1000px;
+    transform: scaleX(-1);
+    z-index: -2;
+    opacity: 0.8;
 }

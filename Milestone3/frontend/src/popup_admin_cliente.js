@@ -118,7 +118,7 @@ function popup_admin_cliente(){
                         </a>
                     </div>
                     <div>
-                        <button onClick={handle_deletar_cliente} id="delete">Excluir</button>
+                        <button onClick={handle_deletar_cliente} id="delete-cliente">Excluir</button>
                     </div>
                 </div>
             </div>

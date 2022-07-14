@@ -12,7 +12,10 @@ function admin_clientes(){
                     <CardAdminCliente indice={0} />
                     <CardAdminCliente indice={1} />
                     <CardAdminCliente indice={2} />
-                    <CardAdminCliente indice={3} />
+                    <CardAdminCliente indice={4} />
+                    <CardAdminCliente indice={5} />
+                    <CardAdminCliente indice={6} />
+                    <CardAdminCliente indice={7} />
                 </div>
 
                 <div className="lista_ondinha">
