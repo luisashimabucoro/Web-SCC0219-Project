@@ -4,6 +4,9 @@ import {useState} from 'react';
 import {Link} from 'react-router-dom';
 
 function card_admin_products(props){
+    
+    console.log("propss");
+    console.log(props);
     Object.size = function(obj) {
         var size = 0,
           key;
@@ -26,7 +29,7 @@ function card_admin_products(props){
         // const items = await data.json();
         var produto_aatual = await data.json();
         console.log(produto_aatual);
-        console.log(indice);
+        console.log("indice:", indice);
         setItems(produto_aatual[indice]);
       };
     

@@ -33,7 +33,7 @@ function edit_products(){
     var indexProduto;
 
     // index que irá indicar quais produtos serão exibidos
-    indexProduto = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(value => value + (pageAdminProducts*10 ));
+    indexProduto = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
 
     return (
         <div>
@@ -45,6 +45,7 @@ function edit_products(){
                     <img src={require('./button_images/add_product_button.png')} alt="Botão para adicionar novo produto"/>
                 </a>
             </div>
+            
             <CardAdminProduct indice={indexProduto[0]}/>
             <CardAdminProduct indice={indexProduto[1]}/>
             <CardAdminProduct indice={indexProduto[2]}/>
@@ -58,19 +59,26 @@ function edit_products(){
             <CardAdminProduct indice={indexProduto[10]}/>
             <CardAdminProduct indice={indexProduto[11]}/>
             <CardAdminProduct indice={indexProduto[12]}/>
+            <CardAdminProduct indice={indexProduto[13]}/>
+            <CardAdminProduct indice={indexProduto[14]}/>
+            <CardAdminProduct indice={indexProduto[15]}/>
+            <CardAdminProduct indice={indexProduto[16]}/>
+            <CardAdminProduct indice={indexProduto[17]}/>
+            <CardAdminProduct indice={indexProduto[18]}/>
+            <CardAdminProduct indice={indexProduto[19]}/>
+            <CardAdminProduct indice={indexProduto[20]}/>
 
-
-
-
-            <div className="pageButtons">
+            {/* <div className="pageButtons">
                 <button type="button" onClick={handle_first_page} className="pagebutton">&lt;&lt;-</button>
                 <button type="button" onClick={handle_prev_page} className="pagebutton">&lt;</button>
                 <button type="button" onClick={handle_next_page} className="pagebutton">&gt;</button>
                 <button type="button" onClick={handle_last_page} className="pagebutton">-&gt;&gt;</button>
-            </div>
-
+            </div> */}
         </div>
-            <Footer />
+        <div className="finalizar_ondinha">
+            <img src={require("./button_images/detalhe.png")} alt="Detalhe onda verde"/>
+        </div>
+        <Footer />
 
 
         </div>
