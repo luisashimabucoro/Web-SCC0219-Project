@@ -164,13 +164,6 @@ Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/downl
 
 Depois de instalados, serão necessários os arquivos localizados no diretório Milestone3, e rodar os seguintes comandos:
 
-Dentro da pasta frontend:
-
-```
-npm install
-npm start
-```
-
 Dentro da pasta backend:
 
 ```
@@ -178,7 +171,15 @@ npm install
 npm run server
 ```
 
-O navegador deve abrir uma aba no seu browser, caso não abra, basta acessar 'http://localhost:3000/'
+Dentro da pasta frontend:
+
+```
+npm install
+npm start
+```
+
+
+Deve ser aberta uma aba no seu browser, caso não abra, basta acessar 'http://localhost:3000/'
 
 
 ## Problemas
