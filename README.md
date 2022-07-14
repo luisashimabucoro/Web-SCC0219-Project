@@ -170,8 +170,7 @@ Dentro da pasta backend:
 npm install
 npm run server
 ```
-
-Dentro da pasta frontend:
+Com o servidor rodando, rode dentro da pasta frontend:
 
 ```
 npm install
