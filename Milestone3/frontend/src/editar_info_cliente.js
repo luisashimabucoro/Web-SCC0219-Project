@@ -28,9 +28,7 @@ function editar_produto(){
     const fazCadastro = async (event) => {
 
         event.preventDefault();
-        alert("fazendo cadastro!");
         if(document.getElementById('cadastro_email').checkValidity()) {
-        alert("fazendo cadastro2!");
 
             if ($('#cadastro_senha').val() === $('#confirma_senha').val()){
                 alert("fazendo cadastro3!");
@@ -64,8 +62,9 @@ function editar_produto(){
                     }
                 );
                 alert("Cadastro realizado com sucesso!");
-                
+                return;
             }
+            alert("Senhas não conferem!")
         }
         
     }
@@ -86,6 +85,7 @@ function editar_produto(){
                                     name="E-mail"
                                     placeholder="Email"
                                     required/>
+                                    
                             <input  id="cadastro_senha"
                                     type="password"
                                     defaultValue={items.password} 

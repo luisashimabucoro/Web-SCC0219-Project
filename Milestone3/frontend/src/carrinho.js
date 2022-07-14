@@ -73,24 +73,21 @@ function carrinho(){
 
     const aumentar_quantidade = async (id) => {
         console.log("aumentando quantidade");
+
         cart.forEach((p) => {
-            console.log("entrou no each");
             if (p.id == id){
-            console.log("deu")
-            console.log(p);
             items.forEach((item) => {
                 if(item.id == p.id){
-                    console.log("entrou no if");
-                    console.log(item);
                     if(item.quantity < item.estoque){
                         item.quantity += 1;
                         setItems(current => [...current]);
+                        p.quantity++;
                     }else{
                         alert("Não há quantidade suficiente no estoque");
                     }
                 }
             })
-            p.quantity++;
+                
                 localStorage.setItem('carrinho', JSON.stringify(cart));
                 console.log(cart);
             }
@@ -111,10 +108,10 @@ function carrinho(){
                     if(item.quantity > 1){
                         item.quantity -= 1;
                         setItems(current => [...current]);
+                        p.quantity--;
                     }
                 }
             })
-            p.quantity--;
                 localStorage.setItem('carrinho', JSON.stringify(cart));
                 console.log(cart);
             }
@@ -131,9 +128,10 @@ function carrinho(){
 				if (cart[i].id == id) break;
 			}
 			cart.splice(i, 1);
-            // setItems(current => [...current]);
-            carrega_carrinho();
+            console.log(cart);
+            setItems([]);
             localStorage.setItem('carrinho', JSON.stringify(cart));
+            await carrega_carrinho();
     }
     localStorage.setItem('preco_final', sum);
 
@@ -148,11 +146,11 @@ function carrinho(){
                         <div className="linha_produto">
                             <div onClick={() => remover_produto(item.id)}  className="botao_apagar">x</div>
                             <img className="carrinho_foto_produto" src={item.img}/>
-                            <p className="carrinho_nome_produto">{item.name}</p>
+                            <p className="carrinho_nome_produto">{item.name.replace(/^(.{20}[^\s]*).*/, "$1")}...</p>
                             <p onClick={() => diminuir_quantidade(item.id)}className="carrinho_diminuir_quantidade">-</p>
                             <p className="carrinho_quantidade_atual">{item.quantity}</p>
                             <p onClick={() => aumentar_quantidade(item.id)} className="carrinho_aumentar_quantidade">+</p>
-                            <p className="carrinho_preco_produto">R$ {item.price*item.quantity}</p>
+                            <p className="carrinho_preco_produto">R$ {(item.price*item.quantity).toFixed(2)}</p>
                         </div>
                         ))}
                         {/* <CardProduto index={1} />
@@ -168,7 +166,7 @@ function carrinho(){
                         <CardProduto index={11} /> */}
                     </div>
                     {/* <PrecoTotal /> */}
-                    <p className="carrinho_precoFinal">Preço Total: R${sum}</p>
+                    <p className="carrinho_precoFinal">Preço Total: R${sum.toFixed(2)}</p>
                     <a id="botao_proxima_pagina" onClick={handle_proxima_pagina}>
                         <div className="botao_carrinho_finalizar_compra">Finalizar Compra</div>
                     </a>

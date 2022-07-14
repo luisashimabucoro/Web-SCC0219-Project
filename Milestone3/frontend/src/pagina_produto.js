@@ -50,8 +50,8 @@ function pagina_produto() {
 
     // Funções para editar a quantidade que o usuário deseja ao carrinho
     const diminuirQuantidade = () => {
-        if(quantidade > 0) setQuantidade(quantidade-1);
-        else setQuantidade(0);
+        if(quantidade > 1) setQuantidade(quantidade-1);
+        else setQuantidade(1);
     }   
     
     const aumentarQuantidade = () =>{
@@ -114,6 +114,7 @@ function pagina_produto() {
 
     }
     console.log(items);
+    let display_preco = parseInt(items.price);
     return (
         <div className="pagina-produto-parent">
             <div className="janela_produto">
@@ -123,7 +124,7 @@ function pagina_produto() {
                 <div className="info_produto">
                     <h1 className="nome_produto">{items.name}</h1>
                     <br/><br/>
-                    <p className="preco_produto">R$ {items.price}</p>
+                    <p className="preco_produto">R$ {display_preco.toFixed(2)}</p>
                     <hr/>
                     <p className="estoque_produto">Estoque atual: {items.estoque}</p>
                     <div className="quantidade_produto">

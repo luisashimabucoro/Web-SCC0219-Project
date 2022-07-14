@@ -302,7 +302,7 @@ function produtos(props){
   }
   teste = teste[indice];
 
-  if(indice <= 10 && teste != null){
+  if(teste != null){
     console.log("NAO EH NULOOOO")
     console.log(teste);
   return(
@@ -315,7 +315,7 @@ function produtos(props){
               <div>
                 <img className="imagem_card_produto" src={teste.img} />
                 <p>{teste.name}</p>
-                <h3>R$ {teste.price}</h3>
+                <h3>R$ {teste.price.toFixed(2)}</h3>
               </div>
           : 
           <div className="parent-fora-estoque">

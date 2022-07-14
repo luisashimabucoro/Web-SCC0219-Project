@@ -56,6 +56,8 @@ hr{
 .linha_produto img{
     width: 87px;
     height: 87px;
+    border-radius: 40px;
+    border: 3px solid rgb(44, 87, 44);
 }
 
 .botao_apagar{
@@ -70,7 +72,9 @@ hr{
 }
 
 .carrinho_diminuir_quantidade{
-    margin-left: 150px;
+    position: absolute;
+    right: 840px;
+    /* margin-left: 150px; */
     margin-top: -14px;
     color: #003532;
     font-size: 70px;
@@ -87,7 +91,9 @@ hr{
     font-size: 30px;
     font-weight: bold;
     padding: 12px;
-    margin: auto 20px;
+    /* margin: auto 20px; */
+    position: absolute;
+    right: 755px;
 }
 
 .carrinho_aumentar_quantidade{
@@ -96,9 +102,12 @@ hr{
     margin-top: -14px;
 
     font-weight: bold;
+    position: absolute;
+    right: 710px;
 }
 .carrinho_preco_produto{
-    margin-left: 50px;
+    position: absolute;
+    right: 600px;
 }
 
 .carrinho_precoFinal{
