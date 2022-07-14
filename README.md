@@ -8,7 +8,7 @@ Link para teste do website hospedado: https://plant-shop-matheusbviana.vercel.ap
 
 ## Requerimentos
 - O sistema deve ter dois tipos de usuário:
-  - *Administradores*: São responsáveis por gerenciar administradores, clientes e podutos. Para utilizar a conta de administrador, utilize as credenciais admin@admin.com:admin no formato (email:senha)
+  - *Administradores*: São responsáveis por gerenciar administradores, clientes e podutos. Para utilizar a conta de administrador, utilize as credenciais admin@admin.com:admin123 no formato (email:senha)
   - *Clientes*: São usuários que acessam o sistema para comprar produtos
 
 - Para armazenar os dados é preciso ter os seguintes registros:
