@@ -224,6 +224,7 @@ function header(){
 		    return;
             }
             alert("Senhas não conferem.")
+	return;
         }
         alert("Email inválido!")
         
