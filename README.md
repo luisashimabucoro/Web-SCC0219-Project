@@ -178,7 +178,8 @@ npm install
 npm run server
 ```
 
-inicie o React, e aguarde a construção e abertura do servidor no navegador.
+O navegador deve abrir uma aba no seu browser, caso não abra, basta acessar 'http://localhost:3000/'
+
 
 ## Problemas
 ## Comentários
