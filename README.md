@@ -8,7 +8,7 @@ Link para teste do website hospedado: https://plant-shop-matheusbviana.vercel.ap
 
 ## Requerimentos
 - O sistema deve ter dois tipos de usuário:
-  - *Administradores*: São responsáveis por gerenciar administradores, clientes e podutos. Para utilizar a conta de administrador, utilize as credenciais admin@admin.com:admin no formato (email:senha)
+  - *Administradores*: São responsáveis por gerenciar administradores, clientes e podutos. Para utilizar a conta de administrador, utilize as credenciais admin@admin.com:admin123 no formato (email:senha)
   - *Clientes*: São usuários que acessam o sistema para comprar produtos
 
 - Para armazenar os dados é preciso ter os seguintes registros:
@@ -162,14 +162,27 @@ Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin n
 
 Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/download/) e seu gerenciador de pacotes [npm](https://nodejs.org/en/download/) instalados.
 
-Depois de instalados, serão necessários os arquivos localizados no diretório Milestone2. Com o diretório aberto e com o comando no terminal 
+Depois de instalados, serão necessários os arquivos localizados no diretório Milestone3, e rodar os seguintes comandos:
+
+
+Importante: A configuração de exibição do Windows deve estar em 100%, assim como o zoom do seu navegador :)
+
+Dentro da pasta backend:
 
 ```
 npm install
-npm start 
+npm run server
+```
+Com o servidor rodando, rode dentro da pasta frontend:
+
+```
+npm install
+npm start
 ```
 
-inicie o React, e aguarde a construção e abertura do servidor no navegador.
+
+Deve ser aberta uma aba no seu browser, caso não abra, basta acessar 'http://localhost:3000/'
+
 
 ## Problemas
 ## Comentários
