@@ -128,7 +128,8 @@ function popup_admin_cliente(){
                             <p><i>E-mail do comprador:</i> {cliente_atual.email}</p>
                             <br/>
                             <hr/>
-                            <p><i>Telefone: </i>{cliente_comprador.phone}</p>
+                            {cliente_comprador.phone == undefined ? <p><i>Telefone do comprador:</i> Não encontrado</p> : <p><i>Telefone do comprador:</i> {cliente_comprador.phone}</p>}
+                            {/* <p><i>Telefone: </i>{cliente_comprador.phone}</p> */}
                             <br/>
                             <hr/>
                             <p><i>Estado: </i>{UF}</p>

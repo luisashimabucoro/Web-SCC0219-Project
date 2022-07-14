@@ -35,9 +35,9 @@ function card_admin_products(props){
     if(Object.size(items) > 0){
         return (
             <div className="product-element">
-                <p className="produto-nome">{items.name}</p>
+                <p className="produto-nome">{items.name.replace(/^(.{20}[^\s]*).*/, "$1")}...</p>
                 <p className="produto-estoque">Estoque: {items.estoque}</p>
-                <p className="produto-preco">Preço: R${items.price}</p>
+                <p className="produto-preco">Preço: R${parseInt(items.price).toFixed(2)}</p>
                 <p className="produto-quantidadevendida">Qnt vendida:{items.quantidadeVendida}</p>
                 <Link to={`/editar_produto?${items.id}`}>
                     <img src={require("./button_images/edit_button.png")} alt="Botão de editar"/>

@@ -190,7 +190,7 @@ function criar_produto(){
 
                     <div className="entrada_preco">
                     <p>Preço Unitário</p>
-                    <input autoComplete="new-password" id="produtoPreco"  className="info-inputs " type="text"/>
+                    <input autoComplete="new-password" id="produtoPreco"  className="info-inputs " type="number"/>
                     </div>
 
                     <div className="entrada_estoque">
