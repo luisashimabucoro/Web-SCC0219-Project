@@ -166,6 +166,7 @@ Depois de instalados, serão necessários os arquivos localizados no diretório 
 
 
 Importante: A configuração de exibição do Windows deve estar em 100%, assim como o zoom do seu navegador :)
+** A pasta é a "EntregaFinal", podem desconsiderar as outras
 
 Dentro da pasta backend:
 
