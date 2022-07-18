@@ -186,5 +186,10 @@ Deve ser aberta uma aba no seu browser, caso não abra, basta acessar 'http://lo
 
 
 ## Problemas
+Após a realização de diversos testes, não conseguimos detectar nenhum problema no funcionamento do site, inicialmente tivemos dificuldades para conectar com a base de dados MongoDB mas após assistir o tutorial com calma conseguimos integrar normalmente.
+
+
 ## Comentários
+O projeto ajudou muito na consolidação de conhecimentos em WEB, especialmente na utilização de React e Node.js, foi extremamente produtivo e didático, com certeza irá nos ajudar futuramente quando formos lidar com desenvolvimento web novamente.
+
 
